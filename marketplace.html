@@ -1,0 +1,1710 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="icon" type="image/x-icon" href="./img/icon/fav.png" />
+      <title>Bug Finder | Products</title>
+      <!-- bootstrap 5 -->
+      <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css" />
+      <!-- font awesome 6 -->
+      <link rel="stylesheet" href="./assets/fontawesome/all.min.css" />
+      <link rel="stylesheet" href="./assets/fontawesome/fontawesome.min.css" />
+      <!-- owl carousel -->
+      <link rel="stylesheet" href="./assets/plugins/owlcarousel/animate.css" />
+      <link rel="stylesheet" href="./assets/plugins/owlcarousel/owl.carousel.min.css" />
+      <link rel="stylesheet" href="./assets/plugins/owlcarousel/owl.theme.default.min.css" />
+      <!-- select 2 -->
+      <link rel="stylesheet" href="./assets/plugins/select2/select2.min.css" />
+      <!-- fancybox -->
+      <link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.css" />
+      <!-- range slider -->
+      <link rel="stylesheet" href="./assets/plugins/rangeslider/range-slider.css" />
+      <!-- custom css -->
+      <link rel="stylesheet" href="./css/style.css" />
+   </head>
+   <body class="">
+      <!-- bottom navbar -->
+      <div class="bottom-nav fixed-bottom d-lg-none">
+         <div class="link-item">
+            <button
+               class="navbar-toggler"
+               type="button"
+               data-bs-toggle="offcanvas"
+               data-bs-target="#userSideMenu"
+               aria-controls="userSideMenu"
+            >
+               <i class="fa-duotone fa-bars-staggered"></i>
+            </button>
+         </div>
+         <div class="link-item">
+            <a href="marketplace.html">
+               <i class="fa-duotone fa-list-dropdown"></i>
+            </a>
+         </div>
+         <div class="link-item active">
+            <a href="index.html">
+               <i class="fa-duotone fa-house"></i>
+            </a>
+         </div>
+         <div class="link-item">
+            <a href="contact.html">
+               <i class="fa-duotone fa-headset"></i>
+            </a>
+         </div>
+         <div class="link-item">
+            <a href="user-panel.html">
+               <i class="fa-duotone fa-user"></i>
+            </a>
+         </div>
+      </div>
+
+      <!-- offcanvas -->
+      <div
+         class="offcanvas offcanvas-start offcanvas-lg user-side-menu"
+         tabindex="-1"
+         id="userSideMenu"
+         aria-labelledby="userSideMenuLabel"
+      >
+         <div class="offcanvas-header">
+            <a class="navbar-brand" href="index.html">
+               <img src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/icon/logo.png" alt=""
+            /></a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+         </div>
+         <div class="offcanvas-body">
+            <ul class="menu-links">
+               <li>
+                  <a href="user-panel.html"><i class="fal fa-home"></i>Home</a>
+               </li>
+               <li>
+                  <a href="user-edit-profile.html"><i class="fal fa-user-edit"></i>Edit Profile</a>
+               </li>
+               <li>
+                  <a href="support-ticket.html"><i class="fal fa-comments-alt"></i>Support Ticket</a>
+               </li>
+               <li>
+                  <a href="reports.html"><i class="fal fa-chart-pie"></i>Reports</a>
+               </li>
+               <li>
+                  <a href="marketplace.html"><i class="fal fa-shopping-cart"></i>Marketplace</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+
+      <!-- product filter sidebar -->
+      <div
+         class="offcanvas offcanvas-start offcanvas-lg user-side-menu"
+         tabindex="-1"
+         id="productFilterArea"
+         aria-labelledby="productFilterAreaLabel"
+      >
+         <div class="offcanvas-header">
+            <h4 class="mb-0">Search</h4>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+         </div>
+         <div class="offcanvas-body">
+            <div class="product-filter-area">
+               <div class="accordion-item">
+                  <h5 class="accordion-header" id="headingOne">
+                     <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseOne"
+                        aria-expanded="false"
+                        aria-controls="collapseOne"
+                     >
+                        Advance Search
+                     </button>
+                  </h5>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+                     <div class="accordion-body">
+                        <div class="filter-box">
+                           <div class="row g-3">
+                              <div class="input-box col-12">
+                                 <input type="text" class="form-control" placeholder="Search within these results" />
+                              </div>
+                              <div class="input-box col-12">
+                                 <select class="js-example-basic-single form-control" name="propertyType">
+                                    <option value="type1">All Categories</option>
+                                    <option value="type1">WordPress</option>
+                                    <option value="type2">Mobile</option>
+                                    <option value="type3">Plugins</option>
+                                    <option value="type4">Php Scripts</option>
+                                    <option value="type5">Html5</option>
+                                    <option value="type6">JavaScript</option>
+                                 </select>
+                              </div>
+                              <div class="input-box col-12">
+                                 <select class="js-example-basic-single form-control" name="categories">
+                                    <option value="type1">Site Templates</option>
+                                    <option value="type2">Apartments</option>
+                                    <option value="type3">Commercial</option>
+                                    <option value="type4">Office</option>
+                                    <option value="type5">Gym</option>
+                                    <option value="type6">Restaurant</option>
+                                    <option value="type7">Villa</option>
+                                 </select>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion-item">
+                  <h5 class="accordion-header" id="headingTwo">
+                     <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo"
+                        aria-expanded="false"
+                        aria-controls="collapseTwo"
+                     >
+                        Price Range
+                     </button>
+                  </h5>
+                  <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo">
+                     <div class="accordion-body">
+                        <div class="filter-box">
+                           <div class="input-box">
+                              <input type="text" class="js-range-slider" name="my_range" value="" />
+                              <label for="customRange1" class="form-label mt-3"> $10 — $1,200</label>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion-item">
+                  <h5 class="accordion-header" id="headingThree">
+                     <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseThree"
+                        aria-expanded="false"
+                        aria-controls="collapseThree"
+                     >
+                        Sales
+                     </button>
+                  </h5>
+                  <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree">
+                     <div class="accordion-body">
+                        <div class="filter-box">
+                           <div class="check-box">
+                              <div class="form-check">
+                                 <input class="form-check-input" type="checkbox" value="" id="sales1" />
+                                 <label class="form-check-label" for="sales1">No sales</label>
+                              </div>
+                              <div class="form-check">
+                                 <input class="form-check-input" type="checkbox" value="" id="sales2" />
+                                 <label class="form-check-label" for="sales2">Low</label>
+                              </div>
+                              <div class="form-check">
+                                 <input class="form-check-input" type="checkbox" value="" id="sales3" />
+                                 <label class="form-check-label" for="sales3">Medium</label>
+                              </div>
+                              <div class="form-check">
+                                 <input class="form-check-input" type="checkbox" value="" id="sales4" />
+                                 <label class="form-check-label" for="sales4">High</label>
+                              </div>
+                              <div class="form-check">
+                                 <input class="form-check-input" type="checkbox" value="" id="sales5" />
+                                 <label class="form-check-label" for="sales5">Top sellers </label>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion-item">
+                  <h5 class="accordion-header" id="headingSeven">
+                     <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseSeven"
+                        aria-expanded="false"
+                        aria-controls="collapseSeven"
+                     >
+                        Date Added
+                     </button>
+                  </h5>
+                  <div id="collapseSeven" class="accordion-collapse collapse show" aria-labelledby="headingSeven">
+                     <div class="accordion-body">
+                        <div class="filter-box">
+                           <div class="check-box">
+                              <div class="form-check">
+                                 <input class="form-check-input" type="checkbox" value="" id="dateAdded1" />
+                                 <label class="form-check-label" for="dateAdded1">Any date</label>
+                              </div>
+                              <div class="form-check">
+                                 <input class="form-check-input" type="checkbox" value="" id="dateAdded2" />
+                                 <label class="form-check-label" for="dateAdded2">In the last week</label>
+                              </div>
+                              <div class="form-check">
+                                 <input class="form-check-input" type="checkbox" value="" id="dateAdded3" />
+                                 <label class="form-check-label" for="dateAdded3">In the last month</label>
+                              </div>
+                              <div class="form-check">
+                                 <input class="form-check-input" type="checkbox" value="" id="dateAdded4" />
+                                 <label class="form-check-label" for="dateAdded4">In the last year</label>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion-item">
+                  <h5 class="accordion-header" id="headingSix">
+                     <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseSix"
+                        aria-expanded="false"
+                        aria-controls="collapseSix"
+                     >
+                        Compatible With
+                     </button>
+                  </h5>
+                  <div id="collapseSix" class="accordion-collapse collapse show" aria-labelledby="headingSix">
+                     <div class="accordion-body">
+                        <div class="filter-box">
+                           <div class="check-box">
+                              <div class="form-check">
+                                 <input class="form-check-input" type="checkbox" value="" id="compatibleWith1" />
+                                 <label class="form-check-label" for="compatibleWith1">Bootstrap</label>
+                              </div>
+                              <div class="form-check">
+                                 <input class="form-check-input" type="checkbox" value="" id="compatibleWith2" />
+                                 <label class="form-check-label" for="compatibleWith2">ReactJS</label>
+                              </div>
+                              <div class="form-check">
+                                 <input class="form-check-input" type="checkbox" value="" id="compatibleWith3" />
+                                 <label class="form-check-label" for="compatibleWith3"> AngularJS </label>
+                              </div>
+                              <div class="form-check">
+                                 <input class="form-check-input" type="checkbox" value="" id="compatibleWith4" />
+                                 <label class="form-check-label" for="compatibleWith4"> VueJS </label>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion-item">
+                  <h5 class="accordion-header" id="headingFour">
+                     <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFour"
+                        aria-expanded="false"
+                        aria-controls="collapseFour"
+                     >
+                        Ratings
+                     </button>
+                  </h5>
+                  <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour">
+                     <div class="accordion-body">
+                        <div class="filter-box">
+                           <div class="check-box">
+                              <div class="form-check">
+                                 <input class="form-check-input" type="checkbox" value="" id="rating1" />
+                                 <label class="form-check-label" for="rating1">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                 </label>
+                              </div>
+                              <div class="form-check">
+                                 <input class="form-check-input" type="checkbox" value="" id="rating2" />
+                                 <label class="form-check-label" for="rating2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                 </label>
+                              </div>
+                              <div class="form-check">
+                                 <input class="form-check-input" type="checkbox" value="" id="rating3" />
+                                 <label class="form-check-label" for="rating3">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                 </label>
+                              </div>
+                              <div class="form-check">
+                                 <input class="form-check-input" type="checkbox" value="" id="rating4" />
+                                 <label class="form-check-label" for="rating4">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                 </label>
+                              </div>
+                              <div class="form-check">
+                                 <input class="form-check-input" type="checkbox" value="" id="rating5" />
+                                 <label class="form-check-label" for="rating5">
+                                    <i class="fas fa-star"></i>
+                                 </label>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="accordion-item">
+                  <h5 class="accordion-header" id="headingFive">
+                     <button
+                        class="accordion-button"
+                        type="button"
+                        data-bs-toggle="collapse"
+                        data-bs-target="#collapseFive"
+                        aria-expanded="false"
+                        aria-controls="collapseFive"
+                     >
+                        Popular Tags
+                     </button>
+                  </h5>
+                  <div id="collapseFive" class="accordion-collapse collapse show" aria-labelledby="headingFive">
+                     <div class="accordion-body">
+                        <div class="filter-box">
+                           <div class="checkbox-group">
+                              <span>
+                                 <input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off" />
+                                 <label class="btn btn-primary" for="btn-check-3">Content Upload</label>
+                              </span>
+                              <span>
+                                 <input type="checkbox" class="btn-check" id="btn-check-4" autocomplete="off" />
+                                 <label class="btn btn-primary" for="btn-check-4">Photography</label>
+                              </span>
+                              <span>
+                                 <input type="checkbox" class="btn-check" id="btn-check-5" autocomplete="off" />
+                                 <label class="btn btn-primary" for="btn-check-5">Instagram Post</label>
+                              </span>
+                              <span>
+                                 <input type="checkbox" class="btn-check" id="btn-check-6" autocomplete="off" />
+                                 <label class="btn btn-primary" for="btn-check-6">Facebook Post</label>
+                              </span>
+                              <span>
+                                 <input type="checkbox" class="btn-check" id="btn-check-1" autocomplete="off" />
+                                 <label class="btn btn-primary" for="btn-check-1">Responsive Design</label>
+                              </span>
+                              <span>
+                                 <input type="checkbox" class="btn-check" id="btn-check-2" autocomplete="off" />
+                                 <label class="btn btn-primary" for="btn-check-2">Interactive Mockup</label>
+                              </span>
+                              <span>
+                                 <input type="checkbox" class="btn-check" id="btn-check-7" autocomplete="off" />
+                                 <label class="btn btn-primary" for="btn-check-7">Content Writing</label>
+                              </span>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- navbar -->
+      <nav class="navbar navbar-expand-lg fixed-top">
+         <div class="container">
+            <a class="navbar-brand" href="index.html">
+               <img src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/icon/logo.png" alt=""
+            /></a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav">
+                  <li class="nav-item">
+                     <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="about.html">About</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle"> Marketplace </a>
+                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="marketplace.html">Php Scripts</a></li>
+                        <li>
+                           <a class="dropdown-item" href="marketplace.html">Html Templates</a>
+                        </li>
+                        <li>
+                           <a class="dropdown-item" href="marketplace.html">Real Estate</a>
+                        </li>
+                        <li>
+                           <a class="dropdown-item" href="marketplace.html">Creative</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="service.html">Service</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+               </ul>
+            </div>
+            <!-- navbar text -->
+            <span class="navbar-text">
+               <!-- inbox -->
+               <div class="notification-panel inbox">
+                  <button class="dropdown-toggle">
+                     <i class="fal fa-comment-alt-lines"></i>
+                     <span class="count">3</span>
+                  </button>
+                  <ul class="notification-dropdown">
+                     <div class="dropdown-box">
+                        <div class="messages-box">
+                           <div class="message active">
+                              <div class="img-box">
+                                 <img
+                                    src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/team/team-1.png"
+                                    class="img-fluid"
+                                    alt=""
+                                 />
+                              </div>
+                              <div class="text-box">
+                                 <a href="">
+                                    <p class="name">
+                                       Alex Hales
+                                       <span class="time">3m</span>
+                                    </p>
+                                    <p>You: I wants to connect your Lorem ipsum dolor sit.</p>
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="message active new">
+                              <div class="img-box">
+                                 <img
+                                    src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/team/team-2.png"
+                                    class="img-fluid"
+                                    alt=""
+                                 />
+                              </div>
+                              <div class="text-box">
+                                 <a href="">
+                                    <p class="name">
+                                       Jonathan James
+                                       <span class="time">45m</span>
+                                    </p>
+                                    <p>Wants to connect your network.</p>
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="message">
+                              <div class="img-box">
+                                 <img
+                                    src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/team/team-3.png"
+                                    class="img-fluid"
+                                    alt=""
+                                 />
+                              </div>
+                              <div class="text-box">
+                                 <a href="">
+                                    <p class="name">
+                                       Selena Gomez
+                                       <span class="time">1h</span>
+                                    </p>
+                                    <p>You: I wants to connect your.</p>
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="message active">
+                              <div class="img-box">
+                                 <img
+                                    src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/team/team-5.png"
+                                    class="img-fluid"
+                                    alt=""
+                                 />
+                              </div>
+                              <div class="text-box">
+                                 <a href="">
+                                    <p class="name">
+                                       Popeye Pinc
+                                       <span class="time">3m</span>
+                                    </p>
+                                    <p>You: I wants to connect your Lorem ipsum dolor sit.</p>
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="message">
+                              <div class="img-box">
+                                 <img
+                                    src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/team/team-7.png"
+                                    class="img-fluid"
+                                    alt=""
+                                 />
+                              </div>
+                              <div class="text-box">
+                                 <a href="">
+                                    <p class="name">
+                                       Anagarma studio
+                                       <span class="time">4h</span>
+                                    </p>
+                                    <p>Wants to connect your network.</p>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="clear-all fixed-bottom">
+                        <a href="">View all Messages</a>
+                     </div>
+                  </ul>
+               </div>
+               <!-- notification panel -->
+               <div class="notification-panel">
+                  <button class="dropdown-toggle">
+                     <i class="fal fa-bell"></i>
+                     <span class="count">3</span>
+                  </button>
+                  <ul class="notification-dropdown">
+                     <div class="dropdown-box">
+                        <li>
+                           <a class="dropdown-item" href="#">
+                              <i class="fal fa-bell"></i>
+                              <div class="text">
+                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                 <span class="time">4 Hours ago</span>
+                              </div>
+                           </a>
+                        </li>
+                        <li>
+                           <a class="dropdown-item" href="#">
+                              <i class="fal fa-bell"></i>
+                              <div class="text">
+                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                 <span class="time">6 Hours ago</span>
+                              </div>
+                           </a>
+                        </li>
+                        <li>
+                           <a class="dropdown-item" href="#">
+                              <i class="fal fa-bell"></i>
+                              <div class="text">
+                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                 <span class="time">1 Day ago</span>
+                              </div>
+                           </a>
+                        </li>
+                        <li>
+                           <a class="dropdown-item" href="#">
+                              <i class="fal fa-bell"></i>
+                              <div class="text">
+                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                 <span class="time">3 Days ago</span>
+                              </div>
+                           </a>
+                        </li>
+                        <li>
+                           <a class="dropdown-item" href="#">
+                              <i class="fal fa-bell"></i>
+                              <div class="text">
+                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                 <span class="time">4 Days ago</span>
+                              </div>
+                           </a>
+                        </li>
+                     </div>
+                     <div class="clear-all fixed-bottom">
+                        <a href="">Clear all</a>
+                     </div>
+                  </ul>
+               </div>
+               <!-- user panel -->
+               <div class="user-panel">
+                  <span class="profile">
+                     <img
+                        src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/client/client-1.jpg"
+                        class="img-fluid"
+                        alt=""
+                     />
+                  </span>
+                  <ul class="user-dropdown">
+                     <li>
+                        <a href="user-panel.html"> <i class="fal fa-user"></i> View Profile </a>
+                     </li>
+                     <li>
+                        <a href=""> <i class="fal fa-file-edit"></i> Create Listing </a>
+                     </li>
+                     <li>
+                        <a href=""> <i class="fal fa-comments-alt"></i> Messages </a>
+                     </li>
+                     <li>
+                        <a href=""> <i class="fal fa-comment-smile"></i> Feedback </a>
+                     </li>
+                     <li>
+                        <a href=""> <i class="fal fa-clipboard-list"></i> Orders </a>
+                     </li>
+                     <li>
+                        <a href=""> <i class="fal fa-wallet"></i> Wallets </a>
+                     </li>
+                     <li>
+                        <a href=""> <i class="fal fa-user-cog"></i> Account Settings </a>
+                     </li>
+                     <li>
+                        <a href=""> <i class="fal fa-sign-out-alt"></i> Sign Out </a>
+                     </li>
+                  </ul>
+               </div>
+            </span>
+         </div>
+      </nav>
+
+      <!-- banner section -->
+      <section class="banner-section">
+         <div class="container">
+            <div class="row">
+               <div class="col-12">
+                  <h3>Our Products</h3>
+                  <nav aria-label="breadcrumb">
+                     <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Our Products</li>
+                     </ol>
+                  </nav>
+               </div>
+            </div>
+         </div>
+         <img class="shape1" src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/shape/mobile.png" alt="" />
+         <img class="shape2" src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/bg/banner-bg.png" alt="" />
+      </section>
+
+      <!-- product category -->
+      <div class="product-category">
+         <div class="container">
+            <div class="row g-4">
+               <div class="col-12">
+                  <form action="">
+                     <div class="input-group">
+                        <input type="email" class="form-control" placeholder="search">
+                        <button><i class="fal fa-search" aria-hidden="true"></i> <span>Search</span></button>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <!-- product page -->
+      <section class="product-page">
+         <div class="container">
+            <div class="row g-lg-4 g-4">
+               <div class="col-xl-3 d-none d-xl-block">
+                  <div class="product-filter-area">
+                     <div class="accordion-item">
+                        <h5 class="accordion-header" id="headingOne">
+                           <button
+                              class="accordion-button"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseOne"
+                              aria-expanded="false"
+                              aria-controls="collapseOne"
+                           >
+                              Advance Search
+                           </button>
+                        </h5>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne">
+                           <div class="accordion-body">
+                              <div class="filter-box">
+                                 <div class="row g-3">
+                                    <div class="input-box col-12">
+                                       <input
+                                          type="text"
+                                          class="form-control"
+                                          placeholder="Search within these results"
+                                       />
+                                    </div>
+                                    <div class="input-box col-12">
+                                       <select class="js-example-basic-single form-control" name="propertyType">
+                                          <option value="type1">All Categories</option>
+                                          <option value="type1">WordPress</option>
+                                          <option value="type2">Mobile</option>
+                                          <option value="type3">Plugins</option>
+                                          <option value="type4">Php Scripts</option>
+                                          <option value="type5">Html5</option>
+                                          <option value="type6">JavaScript</option>
+                                       </select>
+                                    </div>
+                                    <div class="input-box col-12">
+                                       <select class="js-example-basic-single form-control" name="categories">
+                                          <option value="type1">Site Templates</option>
+                                          <option value="type2">Apartments</option>
+                                          <option value="type3">Commercial</option>
+                                          <option value="type4">Office</option>
+                                          <option value="type5">Gym</option>
+                                          <option value="type6">Restaurant</option>
+                                          <option value="type7">Villa</option>
+                                       </select>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item">
+                        <h5 class="accordion-header" id="headingTwo">
+                           <button
+                              class="accordion-button"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseTwo"
+                              aria-expanded="false"
+                              aria-controls="collapseTwo"
+                           >
+                              Price Range
+                           </button>
+                        </h5>
+                        <div id="collapseTwo" class="accordion-collapse collapse show" aria-labelledby="headingTwo">
+                           <div class="accordion-body">
+                              <div class="filter-box">
+                                 <div class="input-box">
+                                    <input type="text" class="js-range-slider" name="my_range" value="" />
+                                    <label for="customRange1" class="form-label mt-3"> $10 — $1,200</label>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item">
+                        <h5 class="accordion-header" id="headingThree">
+                           <button
+                              class="accordion-button"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseThree"
+                              aria-expanded="false"
+                              aria-controls="collapseThree"
+                           >
+                              Sales
+                           </button>
+                        </h5>
+                        <div id="collapseThree" class="accordion-collapse collapse show" aria-labelledby="headingThree">
+                           <div class="accordion-body">
+                              <div class="filter-box">
+                                 <div class="check-box">
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox" value="" id="sales1" />
+                                       <label class="form-check-label" for="sales1">No sales</label>
+                                    </div>
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox" value="" id="sales2" />
+                                       <label class="form-check-label" for="sales2">Low</label>
+                                    </div>
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox" value="" id="sales3" />
+                                       <label class="form-check-label" for="sales3">Medium</label>
+                                    </div>
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox" value="" id="sales4" />
+                                       <label class="form-check-label" for="sales4">High</label>
+                                    </div>
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox" value="" id="sales5" />
+                                       <label class="form-check-label" for="sales5">Top sellers </label>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item">
+                        <h5 class="accordion-header" id="headingSeven">
+                           <button
+                              class="accordion-button"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseSeven"
+                              aria-expanded="false"
+                              aria-controls="collapseSeven"
+                           >
+                              Date Added
+                           </button>
+                        </h5>
+                        <div id="collapseSeven" class="accordion-collapse collapse show" aria-labelledby="headingSeven">
+                           <div class="accordion-body">
+                              <div class="filter-box">
+                                 <div class="check-box">
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox" value="" id="dateAdded1" />
+                                       <label class="form-check-label" for="dateAdded1">Any date</label>
+                                    </div>
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox" value="" id="dateAdded2" />
+                                       <label class="form-check-label" for="dateAdded2">In the last week</label>
+                                    </div>
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox" value="" id="dateAdded3" />
+                                       <label class="form-check-label" for="dateAdded3">In the last month</label>
+                                    </div>
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox" value="" id="dateAdded4" />
+                                       <label class="form-check-label" for="dateAdded4">In the last year</label>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item">
+                        <h5 class="accordion-header" id="headingSix">
+                           <button
+                              class="accordion-button"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseSix"
+                              aria-expanded="false"
+                              aria-controls="collapseSix"
+                           >
+                              Compatible With
+                           </button>
+                        </h5>
+                        <div id="collapseSix" class="accordion-collapse collapse show" aria-labelledby="headingSix">
+                           <div class="accordion-body">
+                              <div class="filter-box">
+                                 <div class="check-box">
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox" value="" id="compatibleWith1" />
+                                       <label class="form-check-label" for="compatibleWith1">Bootstrap</label>
+                                    </div>
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox" value="" id="compatibleWith2" />
+                                       <label class="form-check-label" for="compatibleWith2">ReactJS</label>
+                                    </div>
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox" value="" id="compatibleWith3" />
+                                       <label class="form-check-label" for="compatibleWith3"> AngularJS </label>
+                                    </div>
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox" value="" id="compatibleWith4" />
+                                       <label class="form-check-label" for="compatibleWith4"> VueJS </label>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item">
+                        <h5 class="accordion-header" id="headingFour">
+                           <button
+                              class="accordion-button"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseFour"
+                              aria-expanded="false"
+                              aria-controls="collapseFour"
+                           >
+                              Ratings
+                           </button>
+                        </h5>
+                        <div id="collapseFour" class="accordion-collapse collapse show" aria-labelledby="headingFour">
+                           <div class="accordion-body">
+                              <div class="filter-box">
+                                 <div class="check-box">
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox" value="" id="rating1" />
+                                       <label class="form-check-label" for="rating1">
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                       </label>
+                                    </div>
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox" value="" id="rating2" />
+                                       <label class="form-check-label" for="rating2">
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                       </label>
+                                    </div>
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox" value="" id="rating3" />
+                                       <label class="form-check-label" for="rating3">
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                       </label>
+                                    </div>
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox" value="" id="rating4" />
+                                       <label class="form-check-label" for="rating4">
+                                          <i class="fas fa-star"></i>
+                                          <i class="fas fa-star"></i>
+                                       </label>
+                                    </div>
+                                    <div class="form-check">
+                                       <input class="form-check-input" type="checkbox" value="" id="rating5" />
+                                       <label class="form-check-label" for="rating5">
+                                          <i class="fas fa-star"></i>
+                                       </label>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="accordion-item">
+                        <h5 class="accordion-header" id="headingFive">
+                           <button
+                              class="accordion-button"
+                              type="button"
+                              data-bs-toggle="collapse"
+                              data-bs-target="#collapseFive"
+                              aria-expanded="false"
+                              aria-controls="collapseFive"
+                           >
+                              Popular Tags
+                           </button>
+                        </h5>
+                        <div id="collapseFive" class="accordion-collapse collapse show" aria-labelledby="headingFive">
+                           <div class="accordion-body">
+                              <div class="filter-box">
+                                 <div class="checkbox-group">
+                                    <span>
+                                       <input type="checkbox" class="btn-check" id="btn-check-3" autocomplete="off" />
+                                       <label class="btn btn-primary" for="btn-check-3">Content Upload</label>
+                                    </span>
+                                    <span>
+                                       <input type="checkbox" class="btn-check" id="btn-check-4" autocomplete="off" />
+                                       <label class="btn btn-primary" for="btn-check-4">Photography</label>
+                                    </span>
+                                    <span>
+                                       <input type="checkbox" class="btn-check" id="btn-check-5" autocomplete="off" />
+                                       <label class="btn btn-primary" for="btn-check-5">Instagram Post</label>
+                                    </span>
+                                    <span>
+                                       <input type="checkbox" class="btn-check" id="btn-check-6" autocomplete="off" />
+                                       <label class="btn btn-primary" for="btn-check-6">Facebook Post</label>
+                                    </span>
+                                    <span>
+                                       <input type="checkbox" class="btn-check" id="btn-check-1" autocomplete="off" />
+                                       <label class="btn btn-primary" for="btn-check-1">Responsive Design</label>
+                                    </span>
+                                    <span>
+                                       <input type="checkbox" class="btn-check" id="btn-check-2" autocomplete="off" />
+                                       <label class="btn btn-primary" for="btn-check-2">Interactive Mockup</label>
+                                    </span>
+                                    <span>
+                                       <input type="checkbox" class="btn-check" id="btn-check-7" autocomplete="off" />
+                                       <label class="btn btn-primary" for="btn-check-7">Content Writing</label>
+                                    </span>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-xl-9 ps-lg-4">
+                  <div class="d-none d-xl-flex justify-content-between align-items-center top-filter mb-4">
+                     <div class="result-info">
+                        <p class="mb-md-0">275,498 services available</p>
+                     </div>
+                     <div class="sorting">
+                        <label for="">Sort By</label>
+                        <div class="input-box col-12">
+                           <select class="js-example-basic-single form-control" name="categories">
+                              <option value="type1">Best Selling</option>
+                              <option value="type2">Recomended</option>
+                              <option value="type3">Lowest Pricing</option>
+                              <option value="type4">Highest Pricing</option>
+                              <option value="type5">Default</option>
+                           </select>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="filter-btn-box mb-3 justify-content-start d-flex d-xl-none">
+                     <button
+                        class="filter-btn btn-action"
+                        type="button"
+                        data-bs-toggle="offcanvas"
+                        data-bs-target="#productFilterArea"
+                        aria-controls="productFilterArea"
+                     >
+                        <i class="fad fa-sliders-h"></i> Filter
+                     </button>
+                  </div>
+                  <!-- product box for small device -->
+                  <div class="row g-4 g-lg-5 d-lg-none">
+                     <div class="col-lg-4 col-md-6">
+                        <div class="product-box">
+                           <div class="img-box">
+                              <img
+                                 src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/product/product-1.jpg"
+                                 class="img-fluid"
+                                 alt=""
+                              />
+                              <p class="item-badge on-sale"><i class="fas fa-tags"></i> <span>On Sale</span></p>
+                           </div>
+                           <div class="text-box">
+                              <a href="product-details.html" class="title"
+                                 >SASS BILLER - A SASS Based Invoicing and Billing Platform.</a
+                              >
+                              <div class="bottom-content">
+                                 <div>
+                                    <div>
+                                       <span class="script">Php Script</span>
+                                    </div>
+                                    <p class="my-2">97 Sales</p>
+                                    <div class="rating">
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star"></i>
+                                       <i class="far fa-star"></i>
+                                       <i class="far fa-star"></i>
+                                       <span>(74)</span>
+                                    </div>
+                                 </div>
+                                 <div>
+                                    <h3 class="mb-3 price">$34</h3>
+                                    <div class="d-flex">
+                                       <button class="cart-btn">
+                                          <i class="fad fa-shopping-cart"></i>
+                                       </button>
+                                       <button class="preview-btn">Live Preview</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-4 col-md-6">
+                        <div class="product-box">
+                           <div class="img-box">
+                              <img
+                                 src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/product/product-2.jpg"
+                                 class="img-fluid"
+                                 alt=""
+                              />
+                              <p class="item-badge on-sale"><i class="fas fa-tags"></i> <span>On Sale</span></p>
+                           </div>
+                           <div class="text-box">
+                              <a href="product-details.html" class="title"
+                                 >SASS BILLER - A SASS Based Invoicing and Billing Platform.</a
+                              >
+                              <div class="bottom-content">
+                                 <div>
+                                    <div>
+                                       <span class="script">Php Script</span>
+                                    </div>
+                                    <p class="my-2">97 Sales</p>
+                                    <div class="rating">
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star"></i>
+                                       <i class="far fa-star"></i>
+                                       <i class="far fa-star"></i>
+                                       <span>(74)</span>
+                                    </div>
+                                 </div>
+                                 <div>
+                                    <h3 class="mb-3 price">$34</h3>
+                                    <div class="d-flex">
+                                       <button class="cart-btn">
+                                          <i class="fad fa-shopping-cart"></i>
+                                       </button>
+                                       <button class="preview-btn">Live Preview</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-4 col-md-6">
+                        <div class="product-box">
+                           <div class="img-box">
+                              <img
+                                 src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/product/product-3.jpg"
+                                 class="img-fluid"
+                                 alt=""
+                              />
+                              <p class="item-badge on-sale"><i class="fas fa-tags"></i> <span>On Sale</span></p>
+                           </div>
+                           <div class="text-box">
+                              <a href="product-details.html" class="title"
+                                 >SASS BILLER - A SASS Based Invoicing and Billing Platform.</a
+                              >
+                              <div class="bottom-content">
+                                 <div>
+                                    <div>
+                                       <span class="script">Php Script</span>
+                                    </div>
+                                    <p class="my-2">97 Sales</p>
+                                    <div class="rating">
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star"></i>
+                                       <i class="far fa-star"></i>
+                                       <i class="far fa-star"></i>
+                                       <span>(74)</span>
+                                    </div>
+                                 </div>
+                                 <div>
+                                    <h3 class="mb-3 price">$34</h3>
+                                    <div class="d-flex">
+                                       <button class="cart-btn">
+                                          <i class="fad fa-shopping-cart"></i>
+                                       </button>
+                                       <button class="preview-btn">Live Preview</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-4 col-md-6">
+                        <div class="product-box">
+                           <div class="img-box">
+                              <img
+                                 src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/product/product-4.jpg"
+                                 class="img-fluid"
+                                 alt=""
+                              />
+                              <p class="item-badge"><i class="fas fa-tags"></i> <span>On Sale</span></p>
+                           </div>
+                           <div class="text-box">
+                              <a href="product-details.html" class="title"
+                                 >SASS BILLER - A SASS Based Invoicing and Billing Platform.</a
+                              >
+                              <div class="bottom-content">
+                                 <div>
+                                    <div>
+                                       <span class="script">Php Script</span>
+                                    </div>
+                                    <p class="my-2">97 Sales</p>
+                                    <div class="rating">
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star"></i>
+                                       <i class="fas fa-star"></i>
+                                       <i class="far fa-star"></i>
+                                       <i class="far fa-star"></i>
+                                       <span>(74)</span>
+                                    </div>
+                                 </div>
+                                 <div>
+                                    <h3 class="mb-3 price">$34</h3>
+                                    <div class="d-flex">
+                                       <button class="cart-btn">
+                                          <i class="fad fa-shopping-cart"></i>
+                                       </button>
+                                       <button class="preview-btn">Live Preview</button>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <!-- product box for large device -->
+                  <div class="d-none d-lg-block">
+                     <div class="marketplace-product-box">
+                        <div class="img-box">
+                           <img
+                              src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/product/product-1.jpg"
+                              class="img-fluid"
+                              alt=""
+                           />
+                           <p class="item-badge"><i class="fas fa-bolt"></i> <span>Trending</span></p>
+                        </div>
+                        <div class="text-box">
+                           <a href="product-details.html" class="title"
+                              >SASS BILLER - A SASS Based Invoicing and Billing Platform.</a
+                           >
+                           <span class="author"><i>by - </i> <a href="">bug-finder</a> in portfolio</span>
+                           <ul class="list-unstyle mt-4">
+                              <li>Responsive Layout, Bootstrap V5 Framework</li>
+                              <li>One Page and Multi Page Layouts</li>
+                              <li>Creative agency portfolio HTML5 Template</li>
+                           </ul>
+                        </div>
+                        <div class="price-wrapper">
+                           <h4 class="mb-2 price">$34</h4>
+                           <div class="rating my-2">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <span>(74)</span>
+                           </div>
+                           <p class="mb-2">97 Sales</p>
+                           <small class="mb-2">Last updated: 17 Feb 2023</small>
+                           <div class="d-flex mt-3">
+                              <button class="btn-action-icon bg-primary">
+                                 <i class="fad fa-shopping-cart"></i>
+                              </button>
+                              <button class="btn-custom">Live Preview</button>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="marketplace-product-box">
+                        <div class="img-box">
+                           <img
+                              src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/product/product-2.jpg"
+                              class="img-fluid"
+                              alt=""
+                           />
+                           <p class="item-badge on-sale"><i class="fas fa-tags"></i> <span>On Sale</span></p>
+                        </div>
+                        <div class="text-box">
+                           <a href="product-details.html" class="title"
+                              >SASS BILLER - A SASS Based Invoicing and Billing Platform.</a
+                           >
+                           <span class="author"><i>by - </i> <a href="">bug-finder</a> in portfolio</span>
+                           <ul class="list-unstyle mt-4">
+                              <li>Responsive Layout, Bootstrap V5 Framework</li>
+                              <li>One Page and Multi Page Layouts</li>
+                              <li>Creative agency portfolio HTML5 Template</li>
+                           </ul>
+                        </div>
+                        <div class="price-wrapper">
+                           <h4 class="mb-2 price">$34</h4>
+                           <div class="rating my-2">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <span>(74)</span>
+                           </div>
+                           <p class="mb-2">97 Sales</p>
+                           <small class="mb-2">Last updated: 17 Feb 2023</small>
+                           <div class="d-flex mt-3">
+                              <button class="btn-action-icon bg-primary">
+                                 <i class="fad fa-shopping-cart"></i>
+                              </button>
+                              <button class="btn-custom">Live Preview</button>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="marketplace-product-box">
+                        <div class="img-box">
+                           <img
+                              src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/product/product-3.jpg"
+                              class="img-fluid"
+                              alt=""
+                           />
+                           <p class="item-badge"><i class="fas fa-bolt"></i> <span>Trending</span></p>
+                        </div>
+                        <div class="text-box">
+                           <a href="product-details.html" class="title"
+                              >SASS BILLER - A SASS Based Invoicing and Billing Platform.</a
+                           >
+                           <span class="author"><i>by - </i> <a href="">bug-finder</a> in portfolio</span>
+                           <ul class="list-unstyle mt-4">
+                              <li>Responsive Layout, Bootstrap V5 Framework</li>
+                              <li>One Page and Multi Page Layouts</li>
+                              <li>Creative agency portfolio HTML5 Template</li>
+                           </ul>
+                        </div>
+                        <div class="price-wrapper">
+                           <h4 class="mb-2 price">$34</h4>
+                           <div class="rating my-2">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <span>(74)</span>
+                           </div>
+                           <p class="mb-2">97 Sales</p>
+                           <small class="mb-2">Last updated: 17 Feb 2023</small>
+                           <div class="d-flex mt-3">
+                              <button class="btn-action-icon bg-primary">
+                                 <i class="fad fa-shopping-cart"></i>
+                              </button>
+                              <button class="btn-custom">Live Preview</button>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="marketplace-product-box">
+                        <div class="img-box">
+                           <img
+                              src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/product/product-4.jpg"
+                              class="img-fluid"
+                              alt=""
+                           />
+                           <p class="item-badge on-sale"><i class="fas fa-tags"></i> <span>On Sale</span></p>
+                        </div>
+                        <div class="text-box">
+                           <a href="product-details.html" class="title"
+                              >SASS BILLER - A SASS Based Invoicing and Billing Platform.</a
+                           >
+                           <span class="author"><i>by - </i> <a href="">bug-finder</a> in portfolio</span>
+                           <ul class="list-unstyle mt-4">
+                              <li>Responsive Layout, Bootstrap V5 Framework</li>
+                              <li>One Page and Multi Page Layouts</li>
+                              <li>Creative agency portfolio HTML5 Template</li>
+                           </ul>
+                        </div>
+                        <div class="price-wrapper">
+                           <h4 class="mb-2 price">$34</h4>
+                           <div class="rating my-2">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <span>(74)</span>
+                           </div>
+                           <p class="mb-2">97 Sales</p>
+                           <small class="mb-2">Last updated: 17 Feb 2023</small>
+                           <div class="d-flex mt-3">
+                              <button class="btn-action-icon bg-primary">
+                                 <i class="fad fa-shopping-cart"></i>
+                              </button>
+                              <button class="btn-custom">Live Preview</button>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="marketplace-product-box">
+                        <div class="img-box">
+                           <img
+                              src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/product/product-5.jpg"
+                              class="img-fluid"
+                              alt=""
+                           />
+                           <p class="item-badge on-sale"><i class="fas fa-tags"></i> <span>On Sale</span></p>
+                        </div>
+                        <div class="text-box">
+                           <a href="product-details.html" class="title"
+                              >SASS BILLER - A SASS Based Invoicing and Billing Platform.</a
+                           >
+                           <span class="author"><i>by - </i> <a href="">bug-finder</a> in portfolio</span>
+                           <ul class="list-unstyle mt-4">
+                              <li>Responsive Layout, Bootstrap V5 Framework</li>
+                              <li>One Page and Multi Page Layouts</li>
+                              <li>Creative agency portfolio HTML5 Template</li>
+                           </ul>
+                        </div>
+                        <div class="price-wrapper">
+                           <h4 class="mb-2 price">$34</h4>
+                           <div class="rating my-2">
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="fas fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <i class="far fa-star"></i>
+                              <span>(74)</span>
+                           </div>
+                           <p class="mb-2">97 Sales</p>
+                           <small class="mb-2">Last updated: 17 Feb 2023</small>
+                           <div class="d-flex mt-3">
+                              <button class="btn-action-icon bg-primary">
+                                 <i class="fad fa-shopping-cart"></i>
+                              </button>
+                              <button class="btn-custom">Live Preview</button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <nav aria-label="Page navigation example">
+                     <ul class="pagination justify-content-center">
+                        <li class="page-item disabled">
+                           <a class="page-link">
+                              <i class="fal fa-angle-double-left"></i>
+                           </a>
+                        </li>
+                        <li class="page-item active">
+                           <a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item">
+                           <a class="page-link" href="#">2</a>
+                        </li>
+                        <li class="page-item">
+                           <a class="page-link" href="#">3</a>
+                        </li>
+                        <li class="page-item">
+                           <a class="page-link" href="#">
+                              <i class="fal fa-angle-double-right"></i>
+                           </a>
+                        </li>
+                     </ul>
+                  </nav>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- product section -->
+      <section class="product-section">
+         <div class="container">
+            <div class="row">
+               <div class="col-12">
+                  <div class="header-text text-center">
+                     <h5>Products</h5>
+                     <h2>Related <span class="text-primary">Products</span></h2>
+                     <p class="mx-auto">
+                        Every week, our staff personally hand-pick some of the best new website themes from our
+                        collection.Bug Finder is one of the pioneers in providing I.T. infrastructure and solutions on
+                        various platforms.
+                     </p>
+                  </div>
+               </div>
+            </div>
+            <div class="row g-4 g-xl-5">
+               <div class="col-lg-4 col-md-6">
+                  <div class="product-box">
+                     <div class="img-box">
+                        <img
+                           src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/product/product-1.jpg"
+                           class="img-fluid"
+                           alt=""
+                        />
+                        <p class="item-badge on-sale"><i class="fas fa-tags"></i> <span>On Sale</span></p>
+                     </div>
+                     <div class="text-box">
+                        <a href="product-details.html" class="title"
+                           >SASS BILLER - A SASS Based Invoicing and Billing Platform.</a
+                        >
+                        <div class="bottom-content">
+                           <div>
+                              <div>
+                                 <span class="script">Php Script</span>
+                              </div>
+                              <p class="my-2">97 Sales</p>
+                              <div class="rating">
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="far fa-star"></i>
+                                 <i class="far fa-star"></i>
+                                 <span>(74)</span>
+                              </div>
+                           </div>
+                           <div>
+                              <h3 class="mb-3 price">$34</h3>
+                              <div class="d-flex">
+                                 <button class="cart-btn">
+                                    <i class="fad fa-shopping-cart"></i>
+                                 </button>
+                                 <button class="preview-btn">Live Preview</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-6">
+                  <div class="product-box">
+                     <div class="img-box">
+                        <img
+                           src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/product/product-2.jpg"
+                           class="img-fluid"
+                           alt=""
+                        />
+                        <p class="item-badge on-sale"><i class="fas fa-tags"></i> <span>On Sale</span></p>
+                     </div>
+                     <div class="text-box">
+                        <a href="product-details.html" class="title"
+                           >SASS BILLER - A SASS Based Invoicing and Billing Platform.</a
+                        >
+                        <div class="bottom-content">
+                           <div>
+                              <div>
+                                 <span class="script">Php Script</span>
+                              </div>
+                              <p class="my-2">97 Sales</p>
+                              <div class="rating">
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="far fa-star"></i>
+                                 <i class="far fa-star"></i>
+                                 <span>(74)</span>
+                              </div>
+                           </div>
+                           <div>
+                              <h3 class="mb-3 price">$34</h3>
+                              <div class="d-flex">
+                                 <button class="cart-btn">
+                                    <i class="fad fa-shopping-cart"></i>
+                                 </button>
+                                 <button class="preview-btn">Live Preview</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-lg-4 col-md-6">
+                  <div class="product-box">
+                     <div class="img-box">
+                        <img
+                           src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/product/product-3.jpg"
+                           class="img-fluid"
+                           alt=""
+                        />
+                        <p class="item-badge on-sale"><i class="fas fa-tags"></i> <span>On Sale</span></p>
+                     </div>
+                     <div class="text-box">
+                        <a href="product-details.html" class="title"
+                           >SASS BILLER - A SASS Based Invoicing and Billing Platform.</a
+                        >
+                        <div class="bottom-content">
+                           <div>
+                              <div>
+                                 <span class="script">Php Script</span>
+                              </div>
+                              <p class="my-2">97 Sales</p>
+                              <div class="rating">
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="fas fa-star"></i>
+                                 <i class="far fa-star"></i>
+                                 <i class="far fa-star"></i>
+                                 <span>(74)</span>
+                              </div>
+                           </div>
+                           <div>
+                              <h3 class="mb-3 price">$34</h3>
+                              <div class="d-flex">
+                                 <button class="cart-btn">
+                                    <i class="fad fa-shopping-cart"></i>
+                                 </button>
+                                 <button class="preview-btn">Live Preview</button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="col-12 mt-5 text-center">
+                  <a href="prodcuts.html" class="btn-custom">View more</a>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- footer section -->
+      <footer class="footer-section">
+         <div class="overlay">
+            <div class="container">
+               <div class="row gy-5 gy-lg-0">
+                  <div class="col-lg-3 col-md-6">
+                     <div class="footer-box">
+                        <a class="navbar-brand" href="index.html">
+                           <img src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/icon/logo.png" alt=""
+                        /></a>
+                        <p class="company-bio">
+                           We are a full service like readable english. Many desktop publishing packages and web page
+                           editor now use lorem Ipsum sites still in their.
+                        </p>
+                        <ul>
+                           <li>
+                              <i class="fa-solid fa-location-dot"></i>
+                              <span>House#01, Road#14, Sector#11, Dhaka 1230</span>
+                           </li>
+                           <li>
+                              <i class="fa-solid fa-envelope"></i>
+                              <span>bugfinder.me@gmail.com</span>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+                  <div class="col-lg-9">
+                     <div class="row g-4">
+                        <div class="col-lg-3 col-md-6">
+                           <div class="footer-box">
+                              <h4>Company</h4>
+                              <ul>
+                                 <li><a href="timeline.html">Our Timeline</a></li>
+                                 <li><a href="career.html">Career With us</a></li>
+                                 <li><a href="quote.html">Quote</a></li>
+                                 <li><a href="faq.html">FAQ</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                           <div class="footer-box">
+                              <h4>Our Speciality</h4>
+                              <ul>
+                                 <li><a href="service-details.html">Web Development</a></li>
+                                 <li><a href="service-details.html">UI/UX Design</a></li>
+                                 <li><a href="service-details.html">Mobile Apps</a></li>
+                                 <li><a href="service-details.html">Creative Team</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6">
+                           <div class="footer-box">
+                              <h4>Resources</h4>
+                              <ul>
+                                 <li><a href="">Terms & Condition</a></li>
+                                 <li><a href="">Projects Planning</a></li>
+                                 <li><a href="">Clients Satisfactions</a></li>
+                                 <li><a href="">Financial Tips</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                           <div class="footer-box">
+                              <h4>subscribe newsletter</h4>
+                              <div class="input-box">
+                                 <input type="text" class="form-control" placeholder="Email Address" />
+                                 <button class="btn-custom w-100 mt-4">Subscribe</button>
+                              </div>
+                              <p class="mt-3">
+                                 <i class="fa-duotone fa-circle-check"></i> I agree to all terms and policies
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="d-flex copyright justify-content-between align-items-center">
+                  <div class="social-links">
+                     <a href="https://www.facebook.com/" class="facebook">
+                        <i class="fab fa-facebook-f"></i>
+                     </a>
+                     <a href="https://www.facebook.com/" class="twitter">
+                        <i class="fab fa-twitter"></i>
+                     </a>
+                     <a href="https://www.facebook.com/" class="linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                     </a>
+                     <a href="https://www.facebook.com/" class="youtube">
+                        <i class="fab fa-youtube"></i>
+                     </a>
+                  </div>
+                  <div>
+                     <span> All rights reserved © 2022 by<a href="">Bug Finder</a> </span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+
+      <!-- bootstrap -->
+      <script src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
+      <!-- jquery cdn -->
+      <script src="./assets/jquery/jquery-3.6.0.min.js"></script>
+      <!-- owl carousel -->
+      <script src="./assets/plugins/owlcarousel/owl.carousel.min.js"></script>
+      <!-- counter up -->
+      <script src="./assets/plugins/counterup/jquery.counterup.min.js"></script>
+      <script src="./assets/plugins/counterup/jquery.waypoints.min.js"></script>
+      <!-- select 2 -->
+      <script src="./assets/plugins/select2/select2.min.js"></script>
+      <!-- fancy box -->
+      <script src="./assets/plugins/fancybox/fancybox.umd.js"></script>
+      <!-- apex charts -->
+      <script src="./assets/plugins/apexcharts/apexcharts.min.js"></script>
+      <!-- social js -->
+      <script src="./assets/plugins/socialjs/socialSharing.js"></script>
+      <!-- rangle slider -->
+      <script src="./assets/plugins/rangeslider/range-slider.min.js"></script>
+      <!-- custom script -->
+      <script src="./js/data.js"></script>
+      <script src="./js/script.js"></script>
+   </body>
+</html>

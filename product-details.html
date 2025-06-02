@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="icon" type="image/x-icon" href="./img/icon/fav.png" />
+      <title>Bug Finder | Product Details</title>
+      <!-- bootstrap 5 -->
+      <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css" />
+      <!-- font awesome 6 -->
+      <link rel="stylesheet" href="./assets/fontawesome/all.min.css" />
+      <link rel="stylesheet" href="./assets/fontawesome/fontawesome.min.css" />
+      <!-- owl carousel -->
+      <link rel="stylesheet" href="./assets/plugins/owlcarousel/animate.css" />
+      <link rel="stylesheet" href="./assets/plugins/owlcarousel/owl.carousel.min.css" />
+      <link rel="stylesheet" href="./assets/plugins/owlcarousel/owl.theme.default.min.css" />
+      <!-- select 2 -->
+      <link rel="stylesheet" href="./assets/plugins/select2/select2.min.css" />
+      <!-- fancybox -->
+      <link rel="stylesheet" href="./assets/plugins/fancybox/fancybox.css" />
+      <!-- range slider -->
+      <link rel="stylesheet" href="./assets/plugins/rangeslider/range-slider.css" />
+      <!-- custom css -->
+      <link rel="stylesheet" href="./css/style.css" />
+   </head>
+   <body class="">
+      <!-- bottom navbar -->
+      <div class="bottom-nav fixed-bottom d-lg-none">
+         <div class="link-item">
+            <button
+               class="navbar-toggler"
+               type="button"
+               data-bs-toggle="offcanvas"
+               data-bs-target="#userSideMenu"
+               aria-controls="userSideMenu"
+            >
+               <i class="fa-duotone fa-bars-staggered"></i>
+            </button>
+         </div>
+         <div class="link-item">
+            <a href="marketplace.html">
+               <i class="fa-duotone fa-list-dropdown"></i>
+            </a>
+         </div>
+         <div class="link-item active">
+            <a href="index.html">
+               <i class="fa-duotone fa-house"></i>
+            </a>
+         </div>
+         <div class="link-item">
+            <a href="contact.html">
+               <i class="fa-duotone fa-headset"></i>
+            </a>
+         </div>
+         <div class="link-item">
+            <a href="user-panel.html">
+               <i class="fa-duotone fa-user"></i>
+            </a>
+         </div>
+      </div>
+
+      <!-- offcanvas -->
+      <div
+         class="offcanvas offcanvas-start offcanvas-lg user-side-menu"
+         tabindex="-1"
+         id="userSideMenu"
+         aria-labelledby="userSideMenuLabel"
+      >
+         <div class="offcanvas-header">
+            <a class="navbar-brand" href="index.html">
+               <img src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/icon/logo.png" alt=""
+            /></a>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+         </div>
+         <div class="offcanvas-body">
+            <ul class="menu-links">
+               <li>
+                  <a href="user-panel.html"><i class="fal fa-home"></i>Home</a>
+               </li>
+               <li>
+                  <a href="user-edit-profile.html"><i class="fal fa-user-edit"></i>Edit Profile</a>
+               </li>
+               <li>
+                  <a href="support-ticket.html"><i class="fal fa-comments-alt"></i>Support Ticket</a>
+               </li>
+               <li>
+                  <a href="reports.html"><i class="fal fa-chart-pie"></i>Reports</a>
+               </li>
+               <li>
+                  <a href="marketplace.html"><i class="fal fa-shopping-cart"></i>Marketplace</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+
+      <!-- navbar -->
+      <nav class="navbar navbar-expand-lg fixed-top">
+         <div class="container">
+            <a class="navbar-brand" href="index.html">
+               <img src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/icon/logo.png" alt=""
+            /></a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+               <ul class="navbar-nav">
+                  <li class="nav-item">
+                     <a class="nav-link" href="index.html">Home</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="about.html">About</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                     <a class="nav-link dropdown-toggle"> Marketplace </a>
+                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="marketplace.html">Php Scripts</a></li>
+                        <li>
+                           <a class="dropdown-item" href="marketplace.html">Html Templates</a>
+                        </li>
+                        <li>
+                           <a class="dropdown-item" href="marketplace.html">Real Estate</a>
+                        </li>
+                        <li>
+                           <a class="dropdown-item" href="marketplace.html">Creative</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="service.html">Service</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="contact.html">Contact</a>
+                  </li>
+               </ul>
+            </div>
+            <!-- navbar text -->
+            <span class="navbar-text">
+               <!-- inbox -->
+               <div class="notification-panel inbox">
+                  <button class="dropdown-toggle">
+                     <i class="fal fa-comment-alt-lines"></i>
+                     <span class="count">3</span>
+                  </button>
+                  <ul class="notification-dropdown">
+                     <div class="dropdown-box">
+                        <div class="messages-box">
+                           <div class="message active">
+                              <div class="img-box">
+                                 <img
+                                    src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/team/team-1.png"
+                                    class="img-fluid"
+                                    alt=""
+                                 />
+                              </div>
+                              <div class="text-box">
+                                 <a href="">
+                                    <p class="name">
+                                       Alex Hales
+                                       <span class="time">3m</span>
+                                    </p>
+                                    <p>You: I wants to connect your Lorem ipsum dolor sit.</p>
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="message active new">
+                              <div class="img-box">
+                                 <img
+                                    src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/team/team-2.png"
+                                    class="img-fluid"
+                                    alt=""
+                                 />
+                              </div>
+                              <div class="text-box">
+                                 <a href="">
+                                    <p class="name">
+                                       Jonathan James
+                                       <span class="time">45m</span>
+                                    </p>
+                                    <p>Wants to connect your network.</p>
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="message">
+                              <div class="img-box">
+                                 <img
+                                    src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/team/team-3.png"
+                                    class="img-fluid"
+                                    alt=""
+                                 />
+                              </div>
+                              <div class="text-box">
+                                 <a href="">
+                                    <p class="name">
+                                       Selena Gomez
+                                       <span class="time">1h</span>
+                                    </p>
+                                    <p>You: I wants to connect your.</p>
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="message active">
+                              <div class="img-box">
+                                 <img
+                                    src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/team/team-5.png"
+                                    class="img-fluid"
+                                    alt=""
+                                 />
+                              </div>
+                              <div class="text-box">
+                                 <a href="">
+                                    <p class="name">
+                                       Popeye Pinc
+                                       <span class="time">3m</span>
+                                    </p>
+                                    <p>You: I wants to connect your Lorem ipsum dolor sit.</p>
+                                 </a>
+                              </div>
+                           </div>
+                           <div class="message">
+                              <div class="img-box">
+                                 <img
+                                    src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/team/team-7.png"
+                                    class="img-fluid"
+                                    alt=""
+                                 />
+                              </div>
+                              <div class="text-box">
+                                 <a href="">
+                                    <p class="name">
+                                       Anagarma studio
+                                       <span class="time">4h</span>
+                                    </p>
+                                    <p>Wants to connect your network.</p>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="clear-all fixed-bottom">
+                        <a href="">View all Messages</a>
+                     </div>
+                  </ul>
+               </div>
+               <!-- notification panel -->
+               <div class="notification-panel">
+                  <button class="dropdown-toggle">
+                     <i class="fal fa-bell"></i>
+                     <span class="count">3</span>
+                  </button>
+                  <ul class="notification-dropdown">
+                     <div class="dropdown-box">
+                        <li>
+                           <a class="dropdown-item" href="#">
+                              <i class="fal fa-bell"></i>
+                              <div class="text">
+                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                 <span class="time">4 Hours ago</span>
+                              </div>
+                           </a>
+                        </li>
+                        <li>
+                           <a class="dropdown-item" href="#">
+                              <i class="fal fa-bell"></i>
+                              <div class="text">
+                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                 <span class="time">6 Hours ago</span>
+                              </div>
+                           </a>
+                        </li>
+                        <li>
+                           <a class="dropdown-item" href="#">
+                              <i class="fal fa-bell"></i>
+                              <div class="text">
+                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                 <span class="time">1 Day ago</span>
+                              </div>
+                           </a>
+                        </li>
+                        <li>
+                           <a class="dropdown-item" href="#">
+                              <i class="fal fa-bell"></i>
+                              <div class="text">
+                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                 <span class="time">3 Days ago</span>
+                              </div>
+                           </a>
+                        </li>
+                        <li>
+                           <a class="dropdown-item" href="#">
+                              <i class="fal fa-bell"></i>
+                              <div class="text">
+                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                 <span class="time">4 Days ago</span>
+                              </div>
+                           </a>
+                        </li>
+                     </div>
+                     <div class="clear-all fixed-bottom">
+                        <a href="">Clear all</a>
+                     </div>
+                  </ul>
+               </div>
+               <!-- user panel -->
+               <div class="user-panel">
+                  <span class="profile">
+                     <img
+                        src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/client/client-1.jpg"
+                        class="img-fluid"
+                        alt=""
+                     />
+                  </span>
+                  <ul class="user-dropdown">
+                     <li>
+                        <a href="user-panel.html"> <i class="fal fa-user"></i> View Profile </a>
+                     </li>
+                     <li>
+                        <a href=""> <i class="fal fa-file-edit"></i> Create Listing </a>
+                     </li>
+                     <li>
+                        <a href=""> <i class="fal fa-comments-alt"></i> Messages </a>
+                     </li>
+                     <li>
+                        <a href=""> <i class="fal fa-comment-smile"></i> Feedback </a>
+                     </li>
+                     <li>
+                        <a href=""> <i class="fal fa-clipboard-list"></i> Orders </a>
+                     </li>
+                     <li>
+                        <a href=""> <i class="fal fa-wallet"></i> Wallets </a>
+                     </li>
+                     <li>
+                        <a href=""> <i class="fal fa-user-cog"></i> Account Settings </a>
+                     </li>
+                     <li>
+                        <a href=""> <i class="fal fa-sign-out-alt"></i> Sign Out </a>
+                     </li>
+                  </ul>
+               </div>
+            </span>
+         </div>
+      </nav>
+
+      <!-- banner section -->
+      <section class="banner-section">
+         <div class="container">
+            <div class="row">
+               <div class="col-12">
+                  <h3>Product Details</h3>
+                  <nav aria-label="breadcrumb">
+                     <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">Product Details</li>
+                     </ol>
+                  </nav>
+               </div>
+            </div>
+         </div>
+         <img class="shape1" src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/shape/mobile.png" alt="" />
+         <img class="shape2" src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/bg/banner-bg.png" alt="" />
+      </section>
+
+      <!-- product details -->
+      <section class="product-details">
+         <div class="overlay">
+            <div class="container">
+               <div class="row mb-4">
+                  <div class="col-lg-8">
+                     <h3>SMM Matrix - Social Media Marketing Tool</h3>
+                     <p>
+                        SMM Matrix is a social media marketing tool. This software includes almost everything for you
+                        need to do a social media marketing business.
+                     </p>
+                     <div class="d-flex flex-wrap mt-4">
+                        <div class="me-5">
+                           <h6>BY <a href="" class="text-primary">bug-finder</a></h6>
+                        </div>
+                        <div class="me-5">
+                           <h6><i class="fad fa-cart-plus text-primary"></i> 14 Sales</h6>
+                        </div>
+                        <div class="me-5">
+                           <h6 class="">Recently Updated <i class="fad fa-check-circle text-primary"></i></h6>
+                        </div>
+                        <div class="me-5">
+                           <h6 class="">Well Documented <i class="fad fa-check-circle text-primary"></i></h6>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="row g-4 g-lg-5">
+                  <div class="col-lg-8">
+                     <div class="gallery-box">
+                        <div class="thumbnail">
+                           <img
+                              src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/product/product-14.jpg"
+                              alt=""
+                              class="img-fluid"
+                           />
+                           <p class="item-badge on-sale"><i class="fas fa-tags"></i> <span>On Sale</span></p>
+                           <p class="item-badge trending"><i class="fas fa-bolt"></i> <span>Trending</span></p>
+                        </div>
+                        <div id="mainCarousel" class="carousel mx-auto main_carousel">
+                           <div
+                              class="carousel__slide"
+                              data-src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/product/screenshot-1.png"
+                              data-fancybox="gallery"
+                              data-caption=""
+                           >
+                              <img
+                                 class="img-"
+                                 src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/product/screenshot-1.png"
+                              />
+                           </div>
+                           <div
+                              class="carousel__slide"
+                              data-src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/product/screenshot-2.png"
+                              data-fancybox="gallery"
+                              data-caption=""
+                           >
+                              <img
+                                 class="img-"
+                                 src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/product/screenshot-2.png"
+                              />
+                           </div>
+                           <div
+                              class="carousel__slide"
+                              data-src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/product/screenshot-3.png"
+                              data-fancybox="gallery"
+                              data-caption=""
+                           >
+                              <img
+                                 class="img-"
+                                 src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/product/screenshot-3.png"
+                              />
+                           </div>
+                        </div>
+                        <div class="d-flex flex-wrap justify-content-evenly mt-3">
+                           <a href="" class="btn btn-light btn-sm"><i class="fa-duotone fa-eye"></i> Live Preview</a>
+                           <a
+                              href=""
+                              class="btn btn-light btn-sm carousel__slide"
+                              data-src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/product/product-14.jpg"
+                              data-fancybox="gallery"
+                              data-caption=""
+                              ><i class="fa-duotone fa-grid-2"></i> Screenshots</a
+                           >
+                        </div>
+                     </div>
+                     <div class="navigations">
+                        <a href="" class="btn btn-sm active">Item Details</a>
+                        <a href="" class="btn btn-sm">Comments</a>
+                        <a href="" class="btn btn-sm">Reviews</a>
+                        <a href="" class="btn btn-sm">Support</a>
+                        <a href="changelog.html" class="btn btn-sm">Changelog</a>
+                     </div>
+                     <div id="description" class="description-box mb-5 mt-5">
+                        <p>
+                           SMM Matrix is a social media marketing tool. This software includes almost everything for you
+                           need to do a social media marketing business. It has services lined up for every social media
+                           platform and hence is a very versatile platform. Be it likes, followers, views, or even
+                           general engagement or website traffic, SMM Matrix can get it all, and that too at a price
+                           that does not burn a hole in your pocket.
+                        </p>
+                        <div class="mt-5">
+                           <h4>User's Features:</h4>
+                           <ul>
+                              <li>Informative User Dashboard</li>
+                              <li>User Gallery.</li>
+                              <li>Happy Stories</li>
+                              <li>Free & Premium Plan.</li>
+                              <li>24+ Automated Payment Gateways</li>
+                              <li>Interest List</li>
+                              <li>Ignore List</li>
+                              <li>Match Profile List</li>
+                              <li>User to User Chatting</li>
+                              <li>Transactions</li>
+                              <li>Support Ticket</li>
+                              <li>Update Profile</li>
+                              <li>Change Passowrd</li>
+                              <li>Real Time In App Notification</li>
+                              <li>SMS Notification</li>
+                              <li>Email Notification</li>
+                           </ul>
+                        </div>
+                        <div class="mt-5">
+                           <h4>Admin's Features:</h4>
+                           <ul>
+                              <li>Informative Admin Dashboard</li>
+                              <li>Free & Premium Plan Setup.</li>
+                              <li>Plan Sales record.</li>
+                              <li>User Management</li>
+                              <li>
+                                 Profile Attribute (On Behalf, Hair Color, Marital Status, Family Value, Personal Value,
+                                 Religion etc.)
+                              </li>
+                              <li>Reported Members</li>
+                              <li>Happy Stories</li>
+                              <li>Transactions</li>
+                              <li>24+ Automated Payment Method</li>
+                              <li>Basic Control</li>
+                              <li>Plugin Config (Live chat tawkto & facebook messager)</li>
+                              <li>Logo Settings</li>
+                              <li>SEO Settings</li>
+                              <li>Pusher Configuration</li>
+                              <li>SMS Configuration</li>
+                              <li>EMAIL Configuration</li>
+                              <li>Content Settings</li>
+                              <li>Email Templates</li>
+                              <li>SMS Templates</li>
+                              <li>Push Notification Templates</li>
+                              <li>Payment Methods Settings</li>
+                              <li>Languages Settings</li>
+                              <li>Tickets Managemet</li>
+                              <li>Subscriber Managemet</li>
+                           </ul>
+                        </div>
+                        <div class="mt-5">
+                           <img class="img-fluid" src="https://bugfinder.net/img/payment.jpg" />
+                        </div>
+                        <div class="mt-5">
+                           <p>
+                              Frontend Link: <a href="" class="text-primary">https://script.bugfinder.net/smm-matrix</a>
+                           </p>
+                           <p>
+                              User Login:
+                              <a href="" class="text-primary">https://script.bugfinder.net/smm-matrix/minimal/login</a>
+                           </p>
+                           <p>Username: <span>demouser</span></p>
+                           <p>Password: <span>demouser</span></p>
+                           <p>
+                              Admin Panel:
+                              <a href="" class="text-primary">https://script.bugfinder.net/smm-matrix/minimal/admin</a>
+                           </p>
+                           <p>Username: <a href="" class="text-primary">admin</a></p>
+                           <p>Password: <a href="" class="text-primary">admin</a></p>
+                        </div>
+                        <div class="author-recommended mt-5">
+                           <h4>Recommended Items</h4>
+                           <div class="recommended-item">
+                              <div class="img">
+                                 <img
+                                    class="img-fluid"
+                                    src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/product/product-1.jpg"
+                                 />
+                              </div>
+                              <div class="info">
+                                 <h5>
+                                    <a href="product-details.html" class="text-black"
+                                       >Cloud Polly - Ultimate Text to Speech as SaaS</a
+                                    >
+                                 </h5>
+                                 <span>by <a href="" class="text-primary">bug-finder</a> on codecanyon</span>
+                              </div>
+                              <div class="rating-count">
+                                 <span>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                 </span>
+                                 <h5 class="price mt-3">$45</h5>
+                              </div>
+                           </div>
+                           <div class="recommended-item">
+                              <div class="img">
+                                 <img
+                                    class="img-fluid"
+                                    src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/product/product-2.jpg"
+                                 />
+                              </div>
+                              <div class="info">
+                                 <h5>
+                                    <a href="product-details.html" class="text-black"
+                                       >Cloud Polly - Ultimate Text to Speech as SaaS</a
+                                    >
+                                 </h5>
+                                 <span>by <a href="" class="text-primary">bug-finder</a> on codecanyon</span>
+                              </div>
+                              <div class="rating-count">
+                                 <span>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                 </span>
+                                 <h5 class="price mt-3">$45</h5>
+                              </div>
+                           </div>
+                           <div class="recommended-item">
+                              <div class="img">
+                                 <img
+                                    class="img-fluid"
+                                    src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/product/product-3.jpg"
+                                 />
+                              </div>
+                              <div class="info">
+                                 <h5>
+                                    <a href="product-details.html" class="text-black"
+                                       >Cloud Polly - Ultimate Text to Speech as SaaS</a
+                                    >
+                                 </h5>
+                                 <span>by <a href="" class="text-primary">bug-finder</a> on codecanyon</span>
+                              </div>
+                              <div class="rating-count">
+                                 <span>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                 </span>
+                                 <h5 class="price mt-3">$45</h5>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- side bar start -->
+                  <div class="col-lg-4">
+                     <div class="side-bar">
+                        <div class="side-box">
+                           <div class="text-center">
+                              <img
+                                 src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/product/product-logo.jpg"
+                                 alt=""
+                                 class="product-logo"
+                              />
+                              <h6 class="mt-4">
+                                 <a href="" class="text-primary">bug-finder Portfolio</a>
+                              </h6>
+                           </div>
+                           <div class="mt-3">
+                              <div class="d-flex justify-content-between align-items-baseline">
+                                 <div class="btn-group">
+                                    <button
+                                       type="button"
+                                       class="dropdown-toggle"
+                                       data-bs-toggle="dropdown"
+                                       aria-expanded="false"
+                                    >
+                                       Right-aligned menu example
+                                    </button>
+                                    <ul class="dropdown-menu dropdown-menu-">
+                                       <li class="p-3">
+                                          <a href="">
+                                             <div class="d-flex justify-content-between">
+                                                <h6>Regular License</h6>
+                                                <h5><sup>$</sup>59</h5>
+                                             </div>
+                                             <p class="text-black mb-0">
+                                                Use, by you or one client, in a single end product which end users are
+                                                not charged for. The total price includes the item price and a buyer
+                                                fee.
+                                             </p>
+                                          </a>
+                                       </li>
+                                       <li>
+                                          <hr class="dropdown-divider" />
+                                       </li>
+                                       <li class="p-3">
+                                          <a href="">
+                                             <div class="d-flex justify-content-between">
+                                                <h6>Extended License</h6>
+                                                <h5><sup>$</sup>159</h5>
+                                             </div>
+                                             <p class="text-black mb-0">
+                                                Use, by you or one client, in a single end product which end users are
+                                                not charged for. The total price includes the item price and a buyer
+                                                fee.
+                                             </p>
+                                          </a>
+                                       </li>
+                                       <li>
+                                          <hr class="dropdown-divider" />
+                                       </li>
+                                       <li class="p-1 text-center">
+                                          <a href="" class="text-primary">View license details</a>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <h4 class="mb-0"><sup>$</sup>2.63</h4>
+                              </div>
+                              <ul class="list-unstyled mt-4">
+                                 <li><i class="fad fa-check-circle text-primary"></i> 6 Months support</li>
+                                 <li><i class="fad fa-check-circle text-primary"></i> Future updates</li>
+                                 <li><i class="fad fa-check-circle text-primary"></i> quality checked by Envato</li>
+                              </ul>
+                              <div class="d-flex justify-content-between">
+                                 <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                                    <label class="form-check-label" for="flexCheckDefault">
+                                       Extend support to 12 months
+                                    </label>
+                                 </div>
+                                 <h5><sup>$</sup>2.63</h5>
+                              </div>
+                              <button class="btn w-100 mt-4"><i class="fad fa-cart-plus"></i> Add to cart</button>
+                              <div class="text-center mt-2">
+                                 <small>Price is in US dollars and excludes tax</small>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="side-box">
+                           <div class="badges-wrapper">
+                              <div class="logo">
+                                 <img
+                                    src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/icon/fav.png"
+                                    class="img-fluid"
+                                    alt=""
+                                 />
+                              </div>
+                              <div class="badges">
+                                 <h5><a href="" class="text-black">bug-finder</a></h5>
+                                 <span>
+                                    <img src="img/badges/author_level_7-s.svg" alt="" />
+                                 </span>
+                                 <span>
+                                    <img src="img/badges/collector_level_1-s.svg" alt="" />
+                                 </span>
+                                 <span>
+                                    <img src="img/badges/community_health-s.svg" alt="" />
+                                 </span>
+                                 <span>
+                                    <img src="img/badges/elite-s.svg" alt="" />
+                                 </span>
+                                 <span>
+                                    <img src="img/badges/exclusive-s.svg" alt="" />
+                                 </span>
+                                 <span>
+                                    <img src="img/badges/had_trending_item-s.svg" alt="" />
+                                 </span>
+                                 <span>
+                                    <img src="img/badges/one_billion_milestone-s.svg" alt="" />
+                                 </span>
+                                 <span>
+                                    <img src="img/badges/veteran_level_3-s.svg" alt="" />
+                                 </span>
+                                 <span>
+                                    <img src="img/badges/was_weekly_top_seller-s.svg" alt="" />
+                                 </span>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="side-box">
+                           <ul class="list-unstyled additional-info">
+                              <li>
+                                 <p>Last Update:</p>
+                                 <span>23 March 2023</span>
+                              </li>
+                              <li>
+                                 <p>Published:</p>
+                                 <span>09 January 2023</span>
+                              </li>
+                              <li>
+                                 <p>Software Version:</p>
+                                 <span>PHP 7.x, MySQL 8.x, MySQL 5.x</span>
+                              </li>
+                              <li>
+                                 <p>High Resolution:</p>
+                                 <span>23march2023</span>
+                              </li>
+                              <li>
+                                 <p>LastUpdate:</p>
+                                 <span>Yes</span>
+                              </li>
+                              <li>
+                                 <p>Software Framework:</p>
+                                 <span>23march2023</span>
+                              </li>
+                              <li>
+                                 <p>Files Included:</p>
+                                 <span>JavaScript JS, JavaScript JSON, HTML, CSS, PHP, SQL</span>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <!-- footer section -->
+      <footer class="footer-section">
+         <div class="overlay">
+            <div class="container">
+               <div class="row gy-5 gy-lg-0">
+                  <div class="col-lg-3 col-md-6">
+                     <div class="footer-box">
+                        <a class="navbar-brand" href="index.html"> <img src="https://bug-finder.s3.ap-southeast-1.amazonaws.com/assets/icon/logo.png" alt="" /></a>
+                        <p class="company-bio">
+                           We are a full service like readable english. Many desktop publishing packages and web page
+                           editor now use lorem Ipsum sites still in their.
+                        </p>
+                        <ul>
+                           <li>
+                              <i class="fa-solid fa-location-dot"></i>
+                              <span>House#01, Road#14, Sector#11, Dhaka 1230</span>
+                           </li>
+                           <li>
+                              <i class="fa-solid fa-envelope"></i>
+                              <span>bugfinder.me@gmail.com</span>
+                           </li>
+                        </ul> 
+                     </div>
+                  </div>
+                  <div class="col-lg-9">
+                     <div class="row g-4">
+                        <div class="col-lg-3 col-md-6">
+                           <div class="footer-box">
+                              <h4>Company</h4>
+                              <ul>
+                                 <li><a href="timeline.html">Our Timeline</a></li>
+                                 <li><a href="career.html">Career With us</a></li>
+                                 <li><a href="quote.html">Quote</a></li>
+                                 <li><a href="faq.html">FAQ</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6">
+                           <div class="footer-box">
+                              <h4>Our Speciality</h4>
+                              <ul>
+                                 <li><a href="service-details.html">Web Development</a></li>
+                                 <li><a href="service-details.html">UI/UX Design</a></li>
+                                 <li><a href="service-details.html">Mobile Apps</a></li>
+                                 <li><a href="service-details.html">Creative Team</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="col-lg-2 col-md-6">
+                           <div class="footer-box">
+                              <h4>Resources</h4>
+                              <ul>
+                                 <li><a href="">Terms & Condition</a></li>
+                                 <li><a href="">Projects Planning</a></li>
+                                 <li><a href="">Clients Satisfactions</a></li>
+                                 <li><a href="">Financial Tips</a></li>
+                              </ul>
+                           </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                           <div class="footer-box">
+                              <h4>subscribe newsletter</h4>
+                              <div class="input-box">
+                                 <input type="text" class="form-control" placeholder="Email Address">
+                                 <button class="btn-custom w-100 mt-4">Subscribe</button>
+                              </div>
+                              <p class="mt-3"><i class="fa-duotone fa-circle-check"></i> I agree to all terms and policies</p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="d-flex copyright justify-content-between align-items-center">
+                  <div class="social-links">
+                     <a href="https://www.facebook.com/" class="facebook">
+                        <i class="fab fa-facebook-f"></i>
+                     </a>
+                     <a href="https://www.facebook.com/" class="twitter">
+                        <i class="fab fa-twitter"></i>
+                     </a>
+                     <a href="https://www.facebook.com/" class="linkedin">
+                        <i class="fab fa-linkedin-in"></i>
+                     </a>
+                     <a href="https://www.facebook.com/" class="youtube">
+                        <i class="fab fa-youtube"></i>
+                     </a>
+                  </div>
+                  <div>
+                     <span> All rights reserved © 2022 by<a href="">Bug Finder</a> </span>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </footer>
+
+      <!-- bootstrap -->
+      <script src="./assets/bootstrap/bootstrap.bundle.min.js"></script>
+      <!-- jquery cdn -->
+      <script src="./assets/jquery/jquery-3.6.0.min.js"></script>
+      <!-- owl carousel -->
+      <script src="./assets/plugins/owlcarousel/owl.carousel.min.js"></script>
+      <!-- counter up -->
+      <script src="./assets/plugins/counterup/jquery.counterup.min.js"></script>
+      <script src="./assets/plugins/counterup/jquery.waypoints.min.js"></script>
+      <!-- select 2 -->
+      <script src="./assets/plugins/select2/select2.min.js"></script>
+      <!-- fancy box -->
+      <script src="./assets/plugins/fancybox/fancybox.umd.js"></script>
+      <!-- apex charts -->
+      <script src="./assets/plugins/apexcharts/apexcharts.min.js"></script>
+      <!-- social js -->
+      <script src="./assets/plugins/socialjs/socialSharing.js"></script>
+      <!-- rangle slider -->
+      <script src="./assets/plugins/rangeslider/range-slider.min.js"></script>
+      <!-- custom script -->
+      <script src="./js/data.js"></script>
+      <script src="./js/script.js"></script>
+   </body>
+</html>
