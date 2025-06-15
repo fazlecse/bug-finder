@@ -9300,9 +9300,9 @@ a.btn-custom {
   color: var(--white);
   opacity: 0.85;
 } */
-.hero-section .img-box {
+/* .hero-section .img-box {
   animation: tpupdown2 3s ease-in-out infinite;
-}
+} */
 @media (max-width: 1199px) {
   .hero-section .hero-title {
     font-size: 50px;
@@ -9330,13 +9330,14 @@ Solution section start
   position: relative;
   padding: 100px 0;
   font-size: 18px;
+  background-color: var(--bgLight2);
   background-image: url(../img/hero/gradient-bg-5.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: 50%;
+  background-position: 50% 0;
   z-index: 0;
 }
-.solution-section::before {
+/* .solution-section::before {
   content: "";
   position: absolute;
   width: 100%;
@@ -9350,7 +9351,7 @@ Solution section start
     rgba(255, 255, 255, 0) 100%
   );
   z-index: -1;
-}
+} */
 .solution-section::after {
   content: "";
   position: absolute;
@@ -9365,6 +9366,19 @@ Solution section start
     var(--bgLight2) 100%
   );
   z-index: -1;
+}
+.solution-section .header-text {
+  background-image: linear-gradient(#fff, #0000 80%);
+  border: 1px #0000;
+  border-radius: 24px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 40px 20px;
+  display: flex;
+  position: static;
+  box-shadow: inset 1px -1px 5px #0000;
 }
 .custom-tabs {
   width: 100%;
@@ -9557,6 +9571,9 @@ Solution section start
   }
 }
 @media (max-width: 991px) {
+  .solution-section{
+    padding: 50px 0;
+  }
   .solution-item .right-side {
     text-align: center;
   }
