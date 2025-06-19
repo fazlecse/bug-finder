@@ -22,6 +22,7 @@
   --bgLight3: #f6f6f6;
   --dark: #131022;
   --borderColor: #e5e5e5;
+  --borderColor2: #edf2f8;
   --fontColor: #696969;
   --fontColor2: #a9a8b6;
   --yt: #f20000;
@@ -9272,7 +9273,10 @@ Ads preview page start
   font-family: "DM Sans", sans-serif;
 }
 .ads-preview-page h2 {
-  font-size: 42px;
+  font-size: 38px;
+}
+.ads-preview-page h4 {
+  font-weight: 600;
 }
 .ads-preview-page .header-text h5 {
   text-transform: capitalize;
@@ -9660,6 +9664,17 @@ Solution section start
   transform: translateX(100px);
   transition: all 1s ease;
 }
+
+@keyframes marquee-left {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -9776,6 +9791,8 @@ Solution section end
 }
 .how-it-works-section .header-text {
   text-align: center;
+  max-width: 660px;
+  margin: 0 auto 70px;
 }
 .how-it-works-section .icon-box {
   font-size: 26px;
@@ -9812,6 +9829,7 @@ Solution section end
   background-color: var(--white);
   border-radius: 20px;
   padding: 60px;
+  border: 1px solid var(--borderColor2);
 }
 @media (min-width: 992px) {
   .process-item {
@@ -10063,7 +10081,7 @@ Feature section start
   z-index: -1;
 }
 .feature-section .header-text {
-  max-width: 700px;
+  max-width: 660px;
   margin: 0 auto 70px;
   text-align: center;
   color: var(--black);
@@ -10102,6 +10120,102 @@ Feature section start
 /*----------------------------------------------
 Feature section end
 ----------------------------------------------*/
+
+/*----------------------------------------------
+Build wallet section start
+----------------------------------------------*/
+.build-wallet-section {
+  padding: 100px 0;
+}
+.build-wallet-section .header-text {
+  max-width: 660px;
+  margin: 0 auto 70px;
+  text-align: center;
+}
+.build-box {
+  text-align: center;
+}
+.build-box .icon-box {
+  width: 100px;
+  height: 100px;
+  font-size: 35px;
+  align-items: center;
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  transition: var(--transition);
+  margin-bottom: 50px;
+  color: var(--primary);
+}
+.build-box:hover .icon-box {
+  color: var(--white);
+}
+.build-box:hover .icon-box::after,
+.build-box:hover .icon-box::before {
+  background-color: var(--primary);
+}
+
+.build-box:hover .icon-box .number {
+  color: var(--black);
+  border-color: var(--primary);
+  box-shadow: 0 10px 30px var(--primaryAlpha);
+}
+.build-box .icon-box::after,
+.build-box .icon-box::before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  content: "";
+  height: 100%;
+  position: absolute;
+  border-radius: 20px;
+  background-color: #ececec;
+  background-color: #ffeee8;
+  transition: all 0.3s ease-in-out;
+}
+.build-box .icon-box::after {
+  top: 8px;
+  left: 8px;
+  z-index: -2;
+  transform: rotate(-8deg);
+}
+.build-box .icon-box::before {
+  z-index: -1;
+  background-color: #f9f9f9;
+}
+.build-box .icon-box .number {
+  top: -20px;
+  right: -20px;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  font-size: 16px;
+  color: rgb(var(--body-color));
+  border-radius: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  border: 2px solid transparent;
+  background-color: var(--white);
+  box-shadow: 0 10px 30px rgba(100, 100, 100, 0.2);
+  font-weight: 500;
+}
+.build-box .icon-box i {
+  font-size: 35px;
+}
+.build-box .text-box .title {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--black);
+  margin-bottom: 10px;
+}
+/*----------------------------------------------
+Build wallet section end
+----------------------------------------------*/
+
 /*----------------------------------------------
 00. Testimonial section start
 ----------------------------------------------*/
@@ -10212,6 +10326,53 @@ Testimonial section end
 ----------------------------------------------*/
 
 /*----------------------------------------------
+Clients section start
+----------------------------------------------*/
+.clients-section {
+  padding: 100px 0;
+  background-color: var(--primaryAlpha);
+  overflow: hidden;
+}
+.clients-section .header-text {
+  text-align: center;
+  max-width: 660px;
+  margin: 0 auto 70px;
+}
+.client-item {
+  border-radius: 5px;
+}
+.client-item img {
+  min-width: 150px;
+  object-fit: cover;
+}
+.marquee-section {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.marquee {
+  display: flex;
+  gap: 50px;
+}
+.marquee:hover .marquee-item-wrapper {
+  animation-play-state: paused;
+}
+.marquee-left .marquee-item-wrapper {
+  display: inline-block;
+  animation: marquee-left 40s infinite linear;
+}
+
+.marquee-item-box {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+/*----------------------------------------------
+Clients section end
+----------------------------------------------*/
+
+/*----------------------------------------------
 CTA section start
 ----------------------------------------------*/
 .cta-section {
@@ -10223,6 +10384,10 @@ CTA section start
   padding: 70px 30px;
   border-radius: 20px;
   text-align: center;
+}
+.cta-section-inner .text-box{
+  max-width: 800px;
+  margin: auto;
 }
 .cta-section-inner h2,
 .cta-section-inner h5 {
