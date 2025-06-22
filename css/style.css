@@ -9419,6 +9419,9 @@ Hero section start
   color: var(--black);
   text-transform: capitalize;
 }
+.hero-description3 {
+  font-size: 13px;
+}
 .hero-section .custom-list {
   margin-top: 30px;
 }
@@ -9426,7 +9429,17 @@ Hero section start
 .highlight {
   color: var(--primary);
 }
-
+.hero-section .cmn-btn2:hover {
+  color: var(--black);
+}
+.hero-section .cmn-btn2::after {
+  background-color: transparent;
+  width: auto;
+  position: initial;
+}
+.hero-section .cmn-btn2::before {
+  background-color: transparent;
+}
 @media (max-width: 1199px) {
   .hero-section .hero-title {
     font-size: 50px;
@@ -9642,6 +9655,8 @@ Solution section start
 .solution-item .left-side .img-box img {
   width: 100%;
   height: 100%;
+  box-shadow: 0 -4px 21px #76808e6b;
+  border-radius: 15px;
 }
 .solution-item .right-side {
   width: 60%;
@@ -9774,6 +9789,21 @@ Solution section end
   background-color: var(--bgLight2);
   z-index: 0;
 }
+.how-it-works-section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 120px;
+  height: 200px;
+  left: 0;
+  top: 0;
+  background: linear-gradient(
+    180deg,
+    var(--white) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  z-index: -1;
+}
 .how-it-works-section::after {
   content: "";
   position: absolute;
@@ -9834,7 +9864,7 @@ Solution section end
 @media (min-width: 992px) {
   .process-item {
     position: sticky;
-    top: 95px;
+    top: 100px;
   }
 }
 @media (max-width: 991px) {
@@ -9856,6 +9886,7 @@ Solution section end
 }
 .recommended-box .img-box {
   max-width: 100px;
+  display: block;
 }
 .recommended-box .text-box {
   margin-top: 10px;
@@ -9873,14 +9904,11 @@ Solution section end
   padding: 100px 0;
   font-size: 18px;
   position: relative;
-  /* background-image: url(../img/hero/gradient-bg.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: 50%; */
 }
 .pricing-section .header-text {
-  position: sticky;
-  top: 120px;
+  text-align: center;
+  max-width: 660px;
+  margin: 0 auto 70px;
 }
 
 .pricing-box {
@@ -9909,6 +9937,7 @@ Solution section end
 .pricing-box .section-header .section-title {
   text-transform: capitalize;
   margin-bottom: 15px;
+  font-size: 32px;
 }
 .pricing-box .section-header .description {
   margin-bottom: 0;
@@ -10060,7 +10089,7 @@ Feature section start
   top: 0;
   background: linear-gradient(
     180deg,
-    var(--white) 0%,
+    var(--bgLight2) 0%,
     rgba(255, 255, 255, 0) 100%
   );
   z-index: -1;
@@ -10111,6 +10140,7 @@ Feature section start
   margin-bottom: 0;
   font-size: 20px;
   font-weight: 500;
+  text-transform: capitalize;
 }
 @media (max-width: 991px) {
   .feature-section {
@@ -10126,6 +10156,22 @@ Build wallet section start
 ----------------------------------------------*/
 .build-wallet-section {
   padding: 100px 0;
+  position: relative;
+}
+.build-wallet-section::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 120px;
+  height: 200px;
+  left: 0;
+  top: 0;
+  background: linear-gradient(
+    180deg,
+    var(--bgLight2) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  z-index: -1;
 }
 .build-wallet-section .header-text {
   max-width: 660px;
@@ -10224,6 +10270,22 @@ Build wallet section end
   background-color: var(--bgLight2);
   font-size: 18px;
   padding: 100px 0;
+  z-index: 0;
+}
+.testimonial-section2::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 120px;
+  height: 200px;
+  left: 0;
+  top: 0;
+  background: linear-gradient(
+    180deg,
+    var(--white) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  z-index: -1;
 }
 .testimonial-section2 .header-text {
   max-width: 650px;
@@ -10385,7 +10447,7 @@ CTA section start
   border-radius: 20px;
   text-align: center;
 }
-.cta-section-inner .text-box{
+.cta-section-inner .text-box {
   max-width: 800px;
   margin: auto;
 }
@@ -10394,14 +10456,12 @@ CTA section start
   color: var(--white);
   font-family: "DM Sans", sans-serif;
 }
-.cta-section-inner .btn-custom {
+.cta-section-inner .cmn-btn {
   background-color: var(--white);
   color: var(--primary);
-  font-family: "DM Sans", sans-serif;
-  text-transform: capitalize;
-  font-weight: 500;
-  padding: 16px 36px;
-  border-radius: 10px;
+}
+.cta-section-inner .dropdown-item {
+  color: #212529;
 }
 .cta-section-inner .btn-custom::after,
 .cta-section-inner .btn-custom::before {
