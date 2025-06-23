@@ -9716,9 +9716,15 @@ Solution section start
   .solution-item .right-side {
     padding: 45px;
   }
+  .custom-tab-menu {
+    justify-content: center;
+  }
+  .custom-tab-button {
+    flex: 0;
+  }
 }
 @media (max-width: 991px) {
-  .solution-section .header-text{
+  .solution-section .header-text {
     text-align: center;
   }
   .solution-item {
@@ -9909,6 +9915,7 @@ Solution section end
 .recommended-box .img-box {
   max-width: 100px;
   display: block;
+  margin: auto;
 }
 .recommended-box .text-box {
   margin-top: 10px;
@@ -9918,6 +9925,25 @@ Solution section end
 }
 .recommended-box .rating i {
   color: var(--gold);
+}
+.recommended-carousel .owl-nav {
+  margin-top: 20px;
+  display: flex;
+  justify-content: end;
+}
+.recommended-carousel .owl-nav .owl-prev {
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary) !important;
+  color: var(--white) !important;
+  border-radius: 50% !important;
+}
+.recommended-carousel .owl-nav .owl-next {
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary) !important;
+  color: var(--white) !important;
+  border-radius: 50% !important;
 }
 /* Recommended section end */
 
@@ -9939,6 +9965,9 @@ Solution section end
   height: 100%;
   border: 2px solid var(--borderColor);
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .pricing-box .title {
   font-size: 20px;
@@ -9955,6 +9984,7 @@ Solution section end
   padding: 25px;
   border-radius: 20px;
   background-color: var(--bgLight3);
+  height: 100%;
 }
 .pricing-box .section-header .section-title {
   text-transform: capitalize;
@@ -10331,6 +10361,7 @@ li {
   background: var(--white);
   border-radius: 20px;
   transition: var(--transition);
+  min-height: 320px;
 }
 .testimonial-box .profile-box {
   display: flex;
@@ -10398,12 +10429,24 @@ li {
     padding: 50px 0;
   }
 }
+@media (max-width: 575px) {
+  .testimonial-box {
+    padding: 20px;
+  }
+  .testimonial-carousel {
+    padding: 0;
+  }
+}
 .rtl .testimonial-box .quote-icon {
   right: auto;
   left: 10px;
 }
 .rtl .testimonial-box .quote-icon i {
   transform: rotate(180deg);
+}
+.testimonial-carousel .owl-dots .owl-dot.active span,
+.testimonial-carousel .owl-dots .owl-dot:hover span {
+  background-color: var(--primary);
 }
 /*----------------------------------------------
 Testimonial section end

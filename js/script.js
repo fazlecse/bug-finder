@@ -126,7 +126,7 @@ $(document).ready(function () {
   // testimonial carousel start
   $(".testimonial-carousel").owlCarousel({
     loop: true,
-    autoplay: true,
+    // autoplay: true,
     margin: 30,
     autoplayTimeout: 2000,
     // nav: false,
@@ -139,11 +139,17 @@ $(document).ready(function () {
     responsive: {
       0: {
         items: 1,
-        nav: true,
-        dots: false,
+        nav: false,
+        dots: true,
         dotsEach: 3,
       },
       375: {
+        items: 1,
+        nav: false,
+        dots: true,
+        dotsEach: 2,
+      },
+      576: {
         items: 1,
         nav: true,
         dots: false,
@@ -168,6 +174,58 @@ $(document).ready(function () {
     },
   });
   // testimonial carousel end
+
+  // Recommended carousel start
+  $(".recommended-carousel").owlCarousel({
+    loop: true,
+    // autoplay: true,
+    margin: 30,
+    autoplayTimeout: 2000,
+    // nav: false,
+   //  rtl: true,
+    navText: [
+      "<i class='fa-regular fa-arrow-left-long'></i>",
+      "<i class='fa-regular fa-arrow-right-long'></i>",
+    ],
+    // rtl: true,
+    responsive: {
+      0: {
+        items: 1,
+        nav: true,
+        dots: false,
+        dotsEach: 3,
+      },
+      375: {
+        items: 2,
+        nav: true,
+        dots: false,
+        dotsEach: 2,
+      },
+      576: {
+        items: 2,
+        nav: true,
+        dots: false,
+        dotsEach: 2,
+      },
+      768: {
+        items: 3,
+        nav: true,
+        dots: false,
+        margin: 15,
+      },
+      992: {
+        items: 3,
+        nav: true,
+        dots: false,
+      },
+      1400: {
+        items: 4,
+        nav: true,
+        dots: false,
+      },
+    },
+  });
+  // Recommended carousel end
 
   $(".partner-slider").owlCarousel({
     // loop: true,

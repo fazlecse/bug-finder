@@ -371,8 +371,6 @@
                      <p class="hero-description3">[PaySecure partners with CodeCanyon, so every
                         purchase is processed through trusted platform CodeCanyon]</p>
                      <div class="mt-4 d-flex gap-2 flex-wrap">
-                        <!-- <a href="" class="cmn-btn">Try Demo</a>
-                        <a href="" class="cmn-btn2 ">Choose deal</a> -->
 
                         <div class="custom-dropdown dropdown">
                            <button class="cmn-btn dropdown-toggle" type="button" data-bs-toggle="dropdown"
@@ -381,13 +379,15 @@
                            </button>
                            <ul class="dropdown-menu">
                               <li>
-                                 <a class="dropdown-item" href="https://pay-secure.bugfinder.app/preview/">Web
+                                 <a class="dropdown-item" href="https://pay-secure.bugfinder.app/preview/"
+                                    target="_blank">Web
                                     version
                                  </a>
                               </li>
                               <li>
                                  <a class="dropdown-item"
-                                    href="https://codecanyon.net/item/paysecure-digital-wallet-flutter-app-android-ios/full_screen_preview/58040829?_ga=2.258820170.1360817607.1750479625-1979389976.1701683909">Mobile
+                                    href="https://codecanyon.net/item/paysecure-digital-wallet-flutter-app-android-ios/full_screen_preview/58040829?_ga=2.258820170.1360817607.1750479625-1979389976.1701683909"
+                                    target="_blank">Mobile
                                     version
                                  </a>
                               </li>
@@ -446,15 +446,15 @@
             <div class="mb-5 text-center">
                <h4>Recommended by</h4>
             </div>
-            <div class="row g-4 gy-5">
-               <div class="col-lg-3 col-sm-6 d-flex justify-content-center">
+            <div class="owl-carousel owl-theme recommended-carousel">
+               <div class="item">
                   <div class="recommended-box">
                      <a href="https://www.google.com/maps/place/Bug+Finder/@23.8772729,90.38741,17z/data=!4m18!1m9!3m8!1s0x3755c5f45c8a8381:0x3315d0b5259137e1!2sBug+Finder!8m2!3d23.877268!4d90.3899849!9m1!1b1!16s%2Fg%2F11sw2g4bl2!3m7!1s0x3755c5f45c8a8381:0x3315d0b5259137e1!8m2!3d23.877268!4d90.3899849!9m1!1b1!16s%2Fg%2F11sw2g4bl2?entry=ttu&g_ep=EgoyMDI1MDYxNy4wIKXMDSoASAFQAw%3D%3D"
                         class="img-box">
                         <img src="./img/recommended/Google_2015_logo.svg" alt="">
                      </a>
                      <div class="text-box">
-                        <div class="rating d-flex align-items-center gap-2">
+                        <div class="rating d-flex align-items-center justify-content-center gap-2">
                            <i class="active fa-solid fa-star"></i>
                            <i class="active fa-solid fa-star"></i>
                            <i class="active fa-solid fa-star"></i>
@@ -465,13 +465,13 @@
                      </div>
                   </div>
                </div>
-               <div class="col-lg-3 col-sm-6  d-flex justify-content-center">
+               <div class="item">
                   <div class="recommended-box">
                      <div class="img-box">
                         <img src="./img/recommended/envato-elements.svg" alt="">
                      </div>
                      <div class="text-box">
-                        <div class="rating d-flex align-items-center gap-2">
+                        <div class="rating d-flex align-items-center justify-content-center gap-2">
                            <i class="active fa-solid fa-star"></i>
                            <i class="active fa-solid fa-star"></i>
                            <i class="active fa-solid fa-star"></i>
@@ -482,13 +482,13 @@
                      </div>
                   </div>
                </div>
-               <div class="col-lg-3 col-sm-6  d-flex justify-content-center">
+               <div class="item">
                   <div class="recommended-box">
                      <div class="img-box">
                         <img src="./img/recommended/clutch.svg" alt="">
                      </div>
                      <div class="text-box">
-                        <div class="rating d-flex align-items-center gap-2">
+                        <div class="rating d-flex align-items-center justify-content-center gap-2">
                            <i class="active fa-solid fa-star"></i>
                            <i class="active fa-solid fa-star"></i>
                            <i class="active fa-solid fa-star"></i>
@@ -499,13 +499,13 @@
                      </div>
                   </div>
                </div>
-               <div class="col-lg-3 col-sm-6  d-flex justify-content-center">
+               <div class="item">
                   <div class="recommended-box">
                      <div class="img-box">
                         <img src="./img/recommended/designrush-new-logo.svg" alt="">
                      </div>
                      <div class="text-box">
-                        <div class="rating d-flex align-items-center gap-2">
+                        <div class="rating d-flex align-items-center justify-content-center gap-2">
                            <i class="active fa-solid fa-star"></i>
                            <i class="active fa-solid fa-star"></i>
                            <i class="active fa-solid fa-star"></i>
@@ -525,7 +525,7 @@
       <section class="solution-section">
          <div class="container">
             <div class="header-text">
-               <h5>our solutions</h5>
+               <h5>core features</h5>
                <h2> Features to <span class="text-gradient">Make Decisions</span> </h2>
                <div class="features d-flex justify-content-evenly w-100 flex-wrap">
                   <p class="d-flex gap-2">
@@ -551,30 +551,36 @@
                      </div>
                   </div>
                   <div class="custom-tab-button" data-tab="2">
-                     Bill Payment
+                     virtual cards
                      <div class="custom-load-bar-base">
                         <div class="custom-load-bar"></div>
                      </div>
                   </div>
                   <div class="custom-tab-button" data-tab="3">
-                     Voucher
+                     Bill Payment
                      <div class="custom-load-bar-base">
                         <div class="custom-load-bar"></div>
                      </div>
                   </div>
                   <div class="custom-tab-button" data-tab="4">
-                     Invoice
+                     Voucher
                      <div class="custom-load-bar-base">
                         <div class="custom-load-bar"></div>
                      </div>
                   </div>
                   <div class="custom-tab-button" data-tab="5">
-                     QR Payment
+                     Invoice
                      <div class="custom-load-bar-base">
                         <div class="custom-load-bar"></div>
                      </div>
                   </div>
                   <div class="custom-tab-button" data-tab="6">
+                     QR Payment
+                     <div class="custom-load-bar-base">
+                        <div class="custom-load-bar"></div>
+                     </div>
+                  </div>
+                  <div class="custom-tab-button" data-tab="7">
                      Store
                      <div class="custom-load-bar-base">
                         <div class="custom-load-bar"></div>
@@ -592,11 +598,25 @@
                         <div class="right-side">
                            <h3 class="title">Send Money </h3>
                            <div class="description">Create online payment system, that revolutionize money transfers.
-                              Virtual cards launch into prosperity with e-wallets with virtual card generation.</div>
+                           </div>
                         </div>
                      </div>
                   </div>
                   <div class="custom-tab-pane" data-content="2">
+                     <div class="solution-item">
+                        <div class="left-side">
+                           <div class="img-box">
+                              <img src="./img/solution/virtual-cards.png" alt="">
+                           </div>
+                        </div>
+                        <div class="right-side">
+                           <h3 class="title">Virtual cards</h3>
+                           <div class="description">Launch into Prosperity with [E-wallets with virtual card] Generation
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="custom-tab-pane" data-content="3">
                      <div class="solution-item">
                         <div class="left-side">
                            <div class="img-box">
@@ -605,13 +625,13 @@
                         </div>
                         <div class="right-side">
                            <h3 class="title">Bill Payment</h3>
-                           <div class="description">Simplify life for your clients with [web payment system] Magic!
+                           <div class="description">Simplify life for your clients with web payment system Magic!
                               Allow them to pay utility bills, recharges, and more—fast, reliable, and always on time!
                            </div>
                         </div>
                      </div>
                   </div>
-                  <div class="custom-tab-pane" data-content="3">
+                  <div class="custom-tab-pane" data-content="4">
                      <div class="solution-item">
                         <div class="left-side">
                            <div class="img-box">
@@ -624,7 +644,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="custom-tab-pane" data-content="4">
+                  <div class="custom-tab-pane" data-content="5">
                      <div class="solution-item">
                         <div class="left-side">
                            <div class="img-box">
@@ -638,7 +658,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="custom-tab-pane" data-content="5">
+                  <div class="custom-tab-pane" data-content="6">
                      <div class="solution-item">
                         <div class="left-side">
                            <div class="img-box">
@@ -652,7 +672,7 @@
                         </div>
                      </div>
                   </div>
-                  <div class="custom-tab-pane" data-content="6">
+                  <div class="custom-tab-pane" data-content="7">
                      <div class="solution-item">
                         <div class="left-side">
                            <div class="img-box">
@@ -677,10 +697,10 @@
       <section class="feature-section">
          <div class="container">
             <div class="header-text">
-               <h5>feature section</h5>
+               <h5>features</h5>
                <h2>Powerful Features Built for <span class="text-gradient">Performance and Trust</span></h2>
-               <p>Launch Innovation with Our Elite Team to build a payment app—Faster, Smarter, and Feature-Packed,
-                  Redefining white label mobile wallet Standards!</p>
+               <p>Launch Innovation with Our Elite Team to Build a Faster, Smarter, and Feature-Packed, Redefining White
+                  Label Mobile Wallet Standards!</p>
             </div>
             <div class="row g-4 justify-content-center">
                <div class="col-xl-3 col-lg-4 col-sm-6">
@@ -709,7 +729,7 @@
                            <h5 class="title"> E-Wallet payment gateway</h5>
                         </div>
                      </div>
-                     <p class="mb-0">35+ Gateways are available on this online payment system project.</p>
+                     <p class="mb-0">35+ gateways are available on this online payment system project.</p>
                   </div>
                </div>
                <div class="col-xl-3 col-lg-4 col-sm-6">
@@ -723,7 +743,7 @@
                            <h5 class="title">SEO Friendly</h5>
                         </div>
                      </div>
-                     <p class="mb-0">The Pay Secure script is SEO friendly and optimized for search engines.
+                     <p class="mb-0">Pay Secure Platform is SEO friendly and optimized for search engines.
                      </p>
                   </div>
                </div>
@@ -738,7 +758,8 @@
                            <h5 class="title">GDPR Compliance</h5>
                         </div>
                      </div>
-                     <p class="mb-0">The Pay Secure script is GDPR-compliant and follows all the rules and regulations.
+                     <p class="mb-0">The Digital Wallet Script is GDPR-compliant and follows all the rules and
+                        regulations.
                      </p>
                   </div>
                </div>
@@ -810,7 +831,7 @@
                            <h5 class="title">Responsive Design</h5>
                         </div>
                      </div>
-                     <p class="mb-0">Master Any Device with virtual wallet application so Shine Easily on Every Screen.
+                     <p class="mb-0">Master any device with virtual wallet application so Shine Easily on Every Screen.
                      </p>
                   </div>
                </div>
@@ -966,7 +987,7 @@
                            <h5 class="title">Store Panel</h5>
                         </div>
                      </div>
-                     <p class="mb-0">Rise Your E-Commerce Empire with electronic wallet in e commerce.</p>
+                     <p class="mb-0">Rise your E-Commerce empire with electronic wallet in e commerce.</p>
                   </div>
                </div>
                <div class="col-xl-3 col-lg-4 col-sm-6">
@@ -1008,7 +1029,7 @@
                            <h5 class="title">2FA Security</h5>
                         </div>
                      </div>
-                     <p class="mb-0">Upgrade Security with Two-Factor Authentication for most secure digital wallet.</p>
+                     <p class="mb-0">Upgrade security with Two-Factor Authentication for most secure digital wallet.</p>
                   </div>
                </div>
                <div class="col-xl-3 col-lg-4 col-sm-6">
@@ -1078,7 +1099,7 @@
                            <h5 class="title">Business API Key</h5>
                         </div>
                      </div>
-                     <p class="mb-0">Generate and manage API keys and supercharge Your Business with electronic wallet
+                     <p class="mb-0">Generate and manage API keys and supercharge your business with electronic wallet
                         system. </p>
                   </div>
                </div>
@@ -1153,9 +1174,9 @@
                      <div class="row g-4 g-md-5 align-items-center process-row">
                         <div class="col-lg-7">
                            <h4>Create e Wallet Platform (Web Version)</h4>
-                           <p>Build your own payment gateway with pay secure and digital wallet solutions, offering
-                              services like deposits, withdrawals, money transfers, qr payments, and virtual cards.
-                              Secure, scalable, and customizable.</p>
+                           <p>Build your own payment gateway with Pay Secure, the Digital Wallet Solutions, offering
+                              services like Deposits, Withdrawals, Money Transfers, QR Payments, and Virtual Cards.
+                           </p>
                            <br>
                            <small>Perfect online payment systems for businesses
                               seeking a modern payment system.</small>
@@ -1178,7 +1199,7 @@
                               platform.
                            </p>
                            <br>
-                           <small>Sending, receiving, storing, and spending money — all in one payment app.</small>
+                           <small>Sending, Receiving, Storing, and Spending Money- All in One Payment App.</small>
 
                         </div>
                         <div class="col-lg-5">
@@ -1273,7 +1294,7 @@
                                        wallet
                                     </li>
                                     <li>
-                                       <i class="fa-solid fa-check"></i>Sending, receiving, storing & spending money
+                                       <i class="fa-solid fa-check"></i>Sending, Receiving, Storing & Spending Money
                                     </li>
                                     <li>
                                        <i class="fa-solid fa-check"></i> Perfect for internal & external use
@@ -1338,7 +1359,7 @@
                            <i class="fas fa-star"></i>
                            <i class="fas fa-star"></i>
                            <i class="fas fa-star"></i>
-                           <i class="fal fa-star"></i>
+                           <i class="fas fa-star"></i>
                         </li>
                      </ul>
                      <div class="quote-area">
@@ -1368,7 +1389,7 @@
                            <i class="fas fa-star"></i>
                            <i class="fas fa-star"></i>
                            <i class="fas fa-star"></i>
-                           <i class="fal fa-star"></i>
+                           <i class="fas fa-star"></i>
                         </li>
                      </ul>
                      <div class="quote-area">
@@ -1397,7 +1418,7 @@
                            <i class="fas fa-star"></i>
                            <i class="fas fa-star"></i>
                            <i class="fas fa-star"></i>
-                           <i class="fal fa-star"></i>
+                           <i class="fas fa-star"></i>
                         </li>
                      </ul>
                      <div class="quote-area">
@@ -1512,7 +1533,7 @@
             <div class="cta-section-inner">
                <div class="text-box">
                   <h2>Save up to 49% on wallet solutions (Web and Mobile Application)</h2>
-                  <h5 class="mt-4">make a payment app and serve the maximum services with Pay Secure, as a virtual
+                  <h5 class="mt-4">Make a payment app and serve the maximum services with Pay Secure, as a virtual
                      payment
                      platform. Grab this one-time deal now before it’s gone!</h5>
 
@@ -1525,13 +1546,15 @@
                         </button>
                         <ul class="dropdown-menu">
                            <li>
-                              <a class="dropdown-item" href="https://pay-secure.bugfinder.app/preview/">Web
+                              <a class="dropdown-item" href="https://pay-secure.bugfinder.app/preview/"
+                                 target="_blank">Web
                                  version
                               </a>
                            </li>
                            <li>
                               <a class="dropdown-item"
-                                 href="https://codecanyon.net/item/paysecure-digital-wallet-flutter-app-android-ios/full_screen_preview/58040829?_ga=2.258820170.1360817607.1750479625-1979389976.1701683909">Mobile
+                                 href="https://codecanyon.net/item/paysecure-digital-wallet-flutter-app-android-ios/full_screen_preview/58040829?_ga=2.258820170.1360817607.1750479625-1979389976.1701683909"
+                                 target="_blank">Mobile
                                  version
                               </a>
                            </li>
