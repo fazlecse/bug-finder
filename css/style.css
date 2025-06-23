@@ -9172,14 +9172,16 @@ a.btn-custom {
 }
 
 .custom-dropdown .dropdown-menu {
-  overflow: auto;
+  /* overflow: auto; */
   border: none;
   box-shadow: var(--shadow);
   padding: 4px;
   transform: scaleY(0);
   transform-origin: 0 0;
-  min-width: 270px;
+  /* min-width: 270px; */
+  width: 100%;
   display: block;
+  border-radius: 10px;
 }
 
 .custom-dropdown .dropdown-menu .dropdown-item {
@@ -9200,6 +9202,10 @@ a.btn-custom {
 
 .custom-dropdown .dropdown-menu li {
   position: relative;
+}
+.custom-dropdown .dropdown-menu > li > .dropdown-menu {
+  left: 100%;
+  top: 0%;
 }
 
 .custom-dropdown .dropdown-menu li:not(:last-child) {
@@ -9228,18 +9234,17 @@ a.btn-custom {
     transform: rotate(180deg);
     color: var(--primary-color);
   }
+}
+.custom-dropdown .dropdown-menu > li:hover > .dropdown-menu {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1) !important;
+}
 
-  .custom-dropdown .dropdown-menu > li:hover > .dropdown-menu {
-    visibility: visible;
-    opacity: 1;
-    transform: scale(1) !important;
-  }
-
-  .custom-dropdown:hover > .dropdown-menu {
-    visibility: visible;
-    opacity: 1;
-    transform: scale(1);
-  }
+.custom-dropdown:hover > .dropdown-menu {
+  visibility: visible;
+  opacity: 1;
+  transform: scale(1);
 }
 
 .dropdown-menu-end {
@@ -9370,6 +9375,11 @@ Ads preview page start
 .cmn-btn2:hover::after {
   width: 100%;
 }
+@media (max-width: 991px) {
+  .ads-preview-page h2 {
+    font-size: 32px;
+  }
+}
 /*----------------------------------------------
 Ads preview page end
 ----------------------------------------------*/
@@ -9440,14 +9450,13 @@ Hero section start
 .hero-section .cmn-btn2::before {
   background-color: transparent;
 }
-@media (max-width: 1199px) {
-  .hero-section .hero-title {
-    font-size: 50px;
-  }
-}
+
 @media (max-width: 991px) {
   .hero-section {
     padding: 150px 0 50px;
+  }
+  .hero-section .hero-title {
+    font-size: 38px;
   }
 }
 @media (max-width: 767px) {
@@ -9455,7 +9464,7 @@ Hero section start
     padding: 150px 0 50px;
   }
   .hero-section .hero-title {
-    font-size: 40px;
+    font-size: 36px;
   }
 }
 /*----------------------------------------------
@@ -9709,6 +9718,9 @@ Solution section start
   }
 }
 @media (max-width: 991px) {
+  .solution-section .header-text{
+    text-align: center;
+  }
   .solution-item {
     flex-direction: column;
   }
@@ -9733,6 +9745,13 @@ Solution section start
   }
   .solution-item .right-side {
     text-align: center;
+  }
+  .custom-tab-pane {
+    position: relative;
+    display: none;
+  }
+  .custom-tab-pane.active {
+    display: block;
   }
 }
 @media (max-width: 767px) {
@@ -9871,10 +9890,13 @@ Solution section end
   .how-it-works-section {
     padding: 50px 0;
   }
+  .process-item-inner {
+    text-align: center;
+  }
 }
 @media (max-width: 575px) {
   .process-item-inner {
-    padding: 40px 30px;
+    padding: 30px 20px;
   }
 }
 /* How it works section end */
@@ -10430,6 +10452,11 @@ Clients section start
   align-items: center;
   gap: 40px;
 }
+@media (max-width: 991px) {
+  .clients-section {
+    padding: 50px 0;
+  }
+}
 /*----------------------------------------------
 Clients section end
 ----------------------------------------------*/
@@ -10456,6 +10483,9 @@ CTA section start
   color: var(--white);
   font-family: "DM Sans", sans-serif;
 }
+.cta-section-inner h2 {
+  font-size: 42px;
+}
 .cta-section-inner .cmn-btn {
   background-color: var(--white);
   color: var(--primary);
@@ -10466,6 +10496,11 @@ CTA section start
 .cta-section-inner .btn-custom::after,
 .cta-section-inner .btn-custom::before {
   background-color: var(--white);
+}
+@media (max-width: 991px) {
+  .cta-section-inner h2 {
+    font-size: 32px;
+  }
 }
 /*----------------------------------------------
 CTA section end
